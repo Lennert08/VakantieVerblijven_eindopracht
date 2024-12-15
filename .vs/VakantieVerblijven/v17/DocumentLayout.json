@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "VakantieVerblijven.Domain\\Class1.cs",
               "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Domain\\Class1.cs",
               "RelativeToolTip": "VakantieVerblijven.Domain\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T22:54:24.281Z",
               "EditorCaption": ""
@@ -51,8 +51,7 @@
               "RelativeToolTip": "VakantieVerblijven.Persistence\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T22:54:13.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T22:54:13.19Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "VakantieVerblijven.Presentation\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T22:54:00.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T22:54:00.344Z"
             }
           ]
         }
