@@ -1,0 +1,18 @@
+1,Buiten zwembad
+2,Binnen Zwembad
+3,Picknick weide
+4,Barbecue plaats
+5,Binnenspeeltuin
+6,Buitenspeeltuin
+7,Fietsverhuur
+8,Minigolf
+9,Tennis
+10,Wellness
+11,Restaurant
+12,Supermarkt
+13,Zwemvijver
+14,Bowlingbaan
+15,Voetbalveld
+16,Basketbalveld
+17,Volleybalveld
+18,Klimmuur

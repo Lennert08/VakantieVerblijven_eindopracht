@@ -1,0 +1,8 @@
+1,Sail Park,Oostende
+2,Fun Park,Antwerpen
+3,Adventure Park,Dinant
+4,Adventure Park,Zolder
+5,Geo Park,Aarlen
+6,Fun Park,Geel
+7,Kids Park,Hasselt
+8,Science Park,Genk

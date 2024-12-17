@@ -1,0 +1,65 @@
+@startuml
+entity "Parken" as Parken {
+    + id : int <<PK>>
+    --
+    naam : string
+    locatie : string
+}
+
+entity "Faciliteiten" as Faciliteiten {
+    + id : int <<PK>>
+    --
+    beschrijving : string
+}
+
+entity "Parken_Faciliteiten" as Parken_Faciliteiten {
+    + park_id : int <<FK>>
+    + faciliteit_id : int <<FK>>
+}
+
+entity "Huizen" as Huizen {
+    + id : int <<PK>>
+    --
+    straat : string
+    nummer : int
+    actief : boolean
+    aantal_personen : int
+}
+
+entity "Park_Huizen" as Park_Huizen {
+    + park_id : int <<FK>>
+    + huis_id : int <<FK>>
+}
+
+entity "Reservaties" as Reservaties {
+    + reservatie_id : int <<PK>>
+    --
+    startdatum : date
+    einddatum : date
+    klant_nummer : int <<FK>>
+}
+
+entity "Huis_Reservaties" as Huis_Reservaties {
+    + huis_id : int <<FK>>
+    + reservatie_id : int <<FK>>
+}
+
+entity "Klanten" as Klanten {
+    + klant_id : int <<PK>>
+    --
+    naam : string
+    adres : string
+}
+
+' Relaties
+Parken_Faciliteiten }o--|| Parken
+Parken_Faciliteiten }o--|| Faciliteiten
+
+Park_Huizen }o--|| Parken
+Park_Huizen }o--|| Huizen
+
+Huis_Reservaties }o--|| Huizen
+Huis_Reservaties }o--|| Reservaties
+
+Reservaties }o--|| Klanten
+@enduml
