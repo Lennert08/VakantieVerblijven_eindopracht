@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{453F0FF4-DE1A-4D76-A76B-0705E81F0CFF}|VakantieVerblijven.StartUp\\VakantieVerblijven.StartUp.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.startup\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{453F0FF4-DE1A-4D76-A76B-0705E81F0CFF}|VakantieVerblijven.StartUp\\VakantieVerblijven.StartUp.csproj|solutionrelative:vakantieverblijven.startup\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453F0FF4-DE1A-4D76-A76B-0705E81F0CFF}|VakantieVerblijven.StartUp\\VakantieVerblijven.StartUp.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.startup\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{453F0FF4-DE1A-4D76-A76B-0705E81F0CFF}|VakantieVerblijven.StartUp\\VakantieVerblijven.StartUp.csproj|solutionrelative:vakantieverblijven.startup\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{453F0FF4-DE1A-4D76-A76B-0705E81F0CFF}|VakantieVerblijven.StartUp\\VakantieVerblijven.StartUp.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.startup\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{453F0FF4-DE1A-4D76-A76B-0705E81F0CFF}|VakantieVerblijven.StartUp\\VakantieVerblijven.StartUp.csproj|solutionrelative:vakantieverblijven.startup\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D50CA28-6E7B-44EA-91B9-66FCDFB838C2}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.presentation\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D50CA28-6E7B-44EA-91B9-66FCDFB838C2}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|solutionrelative:vakantieverblijven.presentation\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75C0A1C9-C640-48F3-BD45-9458A91E158C}|VakantieVerblijven.Persistence\\VakantieVerblijven.Persistence.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.persistence\\vakantieverblijven.persistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{75C0A1C9-C640-48F3-BD45-9458A91E158C}|VakantieVerblijven.Persistence\\VakantieVerblijven.Persistence.csproj|solutionrelative:vakantieverblijven.persistence\\vakantieverblijven.persistence.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{453F0FF4-DE1A-4D76-A76B-0705E81F0CFF}|VakantieVerblijven.StartUp\\VakantieVerblijven.StartUp.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.startup\\vakantieverblijven.startup.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -17,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{75C0A1C9-C640-48F3-BD45-9458A91E158C}|VakantieVerblijven.Persistence\\VakantieVerblijven.Persistence.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.persistence\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75C0A1C9-C640-48F3-BD45-9458A91E158C}|VakantieVerblijven.Persistence\\VakantieVerblijven.Persistence.csproj|solutionrelative:vakantieverblijven.persistence\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D50CA28-6E7B-44EA-91B9-66FCDFB838C2}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.presentation\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D50CA28-6E7B-44EA-91B9-66FCDFB838C2}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|solutionrelative:vakantieverblijven.presentation\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,29 +42,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.StartUp\\App.xaml",
+              "RelativeDocumentMoniker": "VakantieVerblijven.StartUp\\App.xaml",
+              "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.StartUp\\App.xaml",
+              "RelativeToolTip": "VakantieVerblijven.StartUp\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-17T01:06:04.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.StartUp\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "VakantieVerblijven.StartUp\\AssemblyInfo.cs",
+              "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.StartUp\\AssemblyInfo.cs",
+              "RelativeToolTip": "VakantieVerblijven.StartUp\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T01:06:00.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VakantieVerblijven.Persistence",
+              "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Persistence\\VakantieVerblijven.Persistence.csproj",
+              "RelativeDocumentMoniker": "VakantieVerblijven.Persistence\\VakantieVerblijven.Persistence.csproj",
+              "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Persistence\\VakantieVerblijven.Persistence.csproj",
+              "RelativeToolTip": "VakantieVerblijven.Persistence\\VakantieVerblijven.Persistence.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-17T01:03:38.578Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.StartUp\\App.xaml.cs",
               "RelativeDocumentMoniker": "VakantieVerblijven.StartUp\\App.xaml.cs",
               "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.StartUp\\App.xaml.cs",
               "RelativeToolTip": "VakantieVerblijven.StartUp\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T23:20:17.583Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "VakantieVerblijven.StartUp",
+              "DocumentIndex": 5,
+              "Title": "VakantieVerblijven.StartUp.csproj",
               "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.StartUp\\VakantieVerblijven.StartUp.csproj",
               "RelativeDocumentMoniker": "VakantieVerblijven.StartUp\\VakantieVerblijven.StartUp.csproj",
               "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.StartUp\\VakantieVerblijven.StartUp.csproj",
@@ -64,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Domain\\Class1.cs",
               "RelativeDocumentMoniker": "VakantieVerblijven.Domain\\Class1.cs",
@@ -72,12 +122,11 @@
               "RelativeToolTip": "VakantieVerblijven.Domain\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T22:54:24.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T22:54:24.281Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Persistence\\Class1.cs",
               "RelativeDocumentMoniker": "VakantieVerblijven.Persistence\\Class1.cs",
@@ -89,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Class1.cs",
               "RelativeDocumentMoniker": "VakantieVerblijven.Presentation\\Class1.cs",
@@ -97,7 +146,8 @@
               "RelativeToolTip": "VakantieVerblijven.Presentation\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T22:54:00.344Z"
+              "WhenOpened": "2024-12-15T22:54:00.344Z",
+              "EditorCaption": ""
             }
           ]
         }
