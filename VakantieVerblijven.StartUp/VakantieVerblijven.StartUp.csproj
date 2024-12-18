@@ -8,4 +8,10 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VakantieVerblijven.Domain\VakantieVerblijven.Domain.csproj" />
+    <ProjectReference Include="..\VakantieVerblijven.Persistence\VakantieVerblijven.Persistence.csproj" />
+    <ProjectReference Include="..\VakantieVerblijven.Presentation\VakantieVerblijven.Presentation.csproj" />
+  </ItemGroup>
+
 </Project>

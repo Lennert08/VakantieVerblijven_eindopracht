@@ -80,6 +80,7 @@ namespace VakantieVerblijven.DatalLoader
                     string huisReservatiesPath = Path.Combine(basePath, "huis_reservaties.txt");
 
                     // Voer import-methodes uit
+                    Console.WriteLine("Data inladen...");
                     ImportFaciliteiten(faciliteitenPath);
                     ImportParken(parkenPath);
                     ImportParkenFaciliteiten(parkenFaciliteitenPath);
@@ -331,60 +332,6 @@ namespace VakantieVerblijven.DatalLoader
                     }
                 }
             }
-
-
-            private void ImportHuisReservaties(string filePath)
-            {
-                using (SqlConnection connection = new SqlConnection(_connectionString))
-                {
-                    connection.Open();
-
-                    foreach (string line in File.ReadAllLines(filePath))
-                    {
-                        string[] data = line.Split(',');
-                        int huisId = int.Parse(data[0]);
-                        int reservatieId = int.Parse(data[1]);
-
-                        // Controleer of huis_id bestaat
-                        string checkHuisQuery = "SELECT COUNT(1) FROM Huizen WHERE Id = @HuisId";
-                        // Controleer of reservatie_id bestaat
-                        string checkReservatieQuery = "SELECT COUNT(1) FROM Reservaties WHERE Id = @ReservatieId";
-
-                        using (SqlCommand checkHuisCmd = new SqlCommand(checkHuisQuery, connection))
-                        using (SqlCommand checkReservatieCmd = new SqlCommand(checkReservatieQuery, connection))
-                        {
-                            checkHuisCmd.Parameters.AddWithValue("@HuisId", huisId);
-                            checkReservatieCmd.Parameters.AddWithValue("@ReservatieId", reservatieId);
-
-                            int huisCount = (int)checkHuisCmd.ExecuteScalar();
-                            int reservatieCount = (int)checkReservatieCmd.ExecuteScalar();
-
-                            if (huisCount > 0 && reservatieCount > 0)
-                            {
-                                // Beide keys bestaan, voer de insert uit
-                                string insertQuery = "INSERT INTO Huis_Reservaties (huis_id, reservatie_id) VALUES (@HuisId, @ReservatieId)";
-                                using (SqlCommand insertCmd = new SqlCommand(insertQuery, connection))
-                                {
-                                    insertCmd.Parameters.AddWithValue("@HuisId", huisId);
-                                    insertCmd.Parameters.AddWithValue("@ReservatieId", reservatieId);
-                                    insertCmd.ExecuteNonQuery();
-                                }
-                            }
-                            else
-                            {
-                                // Optionele console-output om te weten welke ID's ontbreken
-                                if (huisCount == 0)
-                                   //Console.WriteLine($"Huis met ID {huisId} bestaat niet in de Huizen-tabel.");
-                                if (reservatieCount == 0)
-                                    Console.WriteLine($"Reservatie met ID {reservatieId} bestaat niet in de Reservaties-tabel.");
-                            }
-                        }
-                    }
-                }
-            }
-
-
-            /* basic ve
             private void ImportHuisReservaties(string filePath)
             {
                 using (SqlConnection conn = new SqlConnection(_connectionString))
@@ -403,8 +350,7 @@ namespace VakantieVerblijven.DatalLoader
                         }
                     }
                 }
-            */
+            }
         }
     }
 }
-

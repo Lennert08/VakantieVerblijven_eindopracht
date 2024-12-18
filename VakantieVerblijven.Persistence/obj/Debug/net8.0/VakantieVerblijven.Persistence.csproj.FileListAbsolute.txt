@@ -1,0 +1,16 @@
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Persistence\bin\Debug\net8.0\VakantieVerblijven.Persistence.deps.json
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Persistence\bin\Debug\net8.0\VakantieVerblijven.Persistence.dll
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Persistence\bin\Debug\net8.0\VakantieVerblijven.Persistence.pdb
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Persistence\bin\Debug\net8.0\VakantieVerblijven.Domain.dll
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Persistence\bin\Debug\net8.0\VakantieVerblijven.Domain.pdb
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Persistence\obj\Debug\net8.0\VakantieVerblijven.Persistence.csproj.AssemblyReference.cache
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Persistence\obj\Debug\net8.0\VakantieVerblijven.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Persistence\obj\Debug\net8.0\VakantieVerblijven.Persistence.AssemblyInfoInputs.cache
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Persistence\obj\Debug\net8.0\VakantieVerblijven.Persistence.AssemblyInfo.cs
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Persistence\obj\Debug\net8.0\VakantieVerblijven.Persistence.csproj.CoreCompileInputs.cache
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Persistence\obj\Debug\net8.0\VakantieVerblijven.Persistence.sourcelink.json
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Persistence\obj\Debug\net8.0\Vakantie.A8FAA7A9.Up2Date
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Persistence\obj\Debug\net8.0\VakantieVerblijven.Persistence.dll
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Persistence\obj\Debug\net8.0\refint\VakantieVerblijven.Persistence.dll
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Persistence\obj\Debug\net8.0\VakantieVerblijven.Persistence.pdb
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Persistence\obj\Debug\net8.0\ref\VakantieVerblijven.Persistence.dll

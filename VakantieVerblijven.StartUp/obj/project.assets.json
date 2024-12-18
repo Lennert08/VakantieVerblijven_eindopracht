@@ -1,11 +1,71 @@
 {
   "version": 3,
   "targets": {
-    "net8.0-windows7.0": {}
+    "net8.0-windows7.0": {
+      "VakantieVerblijven.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/VakantieVerblijven.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VakantieVerblijven.Domain.dll": {}
+        }
+      },
+      "VakantieVerblijven.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "VakantieVerblijven.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VakantieVerblijven.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VakantieVerblijven.Persistence.dll": {}
+        }
+      },
+      "VakantieVerblijven.Presentation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "VakantieVerblijven.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VakantieVerblijven.Presentation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VakantieVerblijven.Presentation.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "VakantieVerblijven.Domain/1.0.0": {
+      "type": "project",
+      "path": "../VakantieVerblijven.Domain/VakantieVerblijven.Domain.csproj",
+      "msbuildProject": "../VakantieVerblijven.Domain/VakantieVerblijven.Domain.csproj"
+    },
+    "VakantieVerblijven.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../VakantieVerblijven.Persistence/VakantieVerblijven.Persistence.csproj",
+      "msbuildProject": "../VakantieVerblijven.Persistence/VakantieVerblijven.Persistence.csproj"
+    },
+    "VakantieVerblijven.Presentation/1.0.0": {
+      "type": "project",
+      "path": "../VakantieVerblijven.Presentation/VakantieVerblijven.Presentation.csproj",
+      "msbuildProject": "../VakantieVerblijven.Presentation/VakantieVerblijven.Presentation.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0-windows7.0": []
+    "net8.0-windows7.0": [
+      "VakantieVerblijven.Domain >= 1.0.0",
+      "VakantieVerblijven.Persistence >= 1.0.0",
+      "VakantieVerblijven.Presentation >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\lenne\\.nuget\\packages\\": {}
@@ -33,7 +93,17 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Domain\\VakantieVerblijven.Domain.csproj": {
+              "projectPath": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Domain\\VakantieVerblijven.Domain.csproj"
+            },
+            "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Persistence\\VakantieVerblijven.Persistence.csproj": {
+              "projectPath": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Persistence\\VakantieVerblijven.Persistence.csproj"
+            },
+            "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj": {
+              "projectPath": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

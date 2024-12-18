@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VakantieVerblijven.StartUp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+574931e99b56cbdec87ded871b94969c186e9039")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2906c2b0b4344edcfd3fec9e65c70e99ab077f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("VakantieVerblijven.StartUp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VakantieVerblijven.StartUp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

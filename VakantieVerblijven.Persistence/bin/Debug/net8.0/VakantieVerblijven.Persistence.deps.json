@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "VakantieVerblijven.Persistence/1.0.0": {
+        "dependencies": {
+          "VakantieVerblijven.Domain": "1.0.0"
+        },
+        "runtime": {
+          "VakantieVerblijven.Persistence.dll": {}
+        }
+      },
+      "VakantieVerblijven.Domain/1.0.0": {
+        "runtime": {
+          "VakantieVerblijven.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "VakantieVerblijven.Persistence/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VakantieVerblijven.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

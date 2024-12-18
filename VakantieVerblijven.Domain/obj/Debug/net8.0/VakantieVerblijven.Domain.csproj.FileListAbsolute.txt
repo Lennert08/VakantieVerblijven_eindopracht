@@ -1,0 +1,12 @@
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Domain\bin\Debug\net8.0\VakantieVerblijven.Domain.deps.json
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Domain\bin\Debug\net8.0\VakantieVerblijven.Domain.dll
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Domain\bin\Debug\net8.0\VakantieVerblijven.Domain.pdb
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Domain\obj\Debug\net8.0\VakantieVerblijven.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Domain\obj\Debug\net8.0\VakantieVerblijven.Domain.AssemblyInfoInputs.cache
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Domain\obj\Debug\net8.0\VakantieVerblijven.Domain.AssemblyInfo.cs
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Domain\obj\Debug\net8.0\VakantieVerblijven.Domain.csproj.CoreCompileInputs.cache
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Domain\obj\Debug\net8.0\VakantieVerblijven.Domain.sourcelink.json
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Domain\obj\Debug\net8.0\VakantieVerblijven.Domain.dll
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Domain\obj\Debug\net8.0\refint\VakantieVerblijven.Domain.dll
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Domain\obj\Debug\net8.0\VakantieVerblijven.Domain.pdb
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Domain\obj\Debug\net8.0\ref\VakantieVerblijven.Domain.dll
