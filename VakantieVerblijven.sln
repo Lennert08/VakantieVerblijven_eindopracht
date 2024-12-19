@@ -5,13 +5,15 @@ VisualStudioVersion = 17.11.35431.28
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VakantieVerblijven.DatalLoader", "VakantieVerblijven.DatalLoader\VakantieVerblijven.DatalLoader.csproj", "{5B9B1F41-B371-4F41-A0CC-E8CBDAC5A1F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VakantieVerblijven.StartUp", "VakantieVerblijven.StartUp\VakantieVerblijven.StartUp.csproj", "{B9554218-6F04-4598-A578-DBB549145B41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VakantieVerblijven.StartUp", "VakantieVerblijven.StartUp\VakantieVerblijven.StartUp.csproj", "{B9554218-6F04-4598-A578-DBB549145B41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VakantieVerblijven.Presentation", "VakantieVerblijven.Presentation\VakantieVerblijven.Presentation.csproj", "{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VakantieVerblijven.Presentation", "VakantieVerblijven.Presentation\VakantieVerblijven.Presentation.csproj", "{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VakantieVerblijven.Persistence", "VakantieVerblijven.Persistence\VakantieVerblijven.Persistence.csproj", "{4B8799E5-6D16-4ADD-A7A5-25DDD53F29A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VakantieVerblijven.Persistence", "VakantieVerblijven.Persistence\VakantieVerblijven.Persistence.csproj", "{4B8799E5-6D16-4ADD-A7A5-25DDD53F29A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VakantieVerblijven.Domain", "VakantieVerblijven.Domain\VakantieVerblijven.Domain.csproj", "{81BA389C-71C7-4262-8DE4-BA7662B008D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VakantieVerblijven.Domain", "VakantieVerblijven.Domain\VakantieVerblijven.Domain.csproj", "{81BA389C-71C7-4262-8DE4-BA7662B008D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VakantieVerblijven.XUnitTests", "VakantieVerblijven.XUnitTests\VakantieVerblijven.XUnitTests.csproj", "{400D3736-4DCA-4936-AFA1-E14ECC0919D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{81BA389C-71C7-4262-8DE4-BA7662B008D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81BA389C-71C7-4262-8DE4-BA7662B008D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81BA389C-71C7-4262-8DE4-BA7662B008D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{400D3736-4DCA-4936-AFA1-E14ECC0919D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{400D3736-4DCA-4936-AFA1-E14ECC0919D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{400D3736-4DCA-4936-AFA1-E14ECC0919D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{400D3736-4DCA-4936-AFA1-E14ECC0919D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

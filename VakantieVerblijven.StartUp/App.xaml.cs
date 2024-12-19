@@ -15,6 +15,7 @@ namespace VakantieVerblijven.StartUp
         {
             DomainManager domainManager = new DomainManager();
             VakantieVerblijvenApplication vakantieVerblijvenApplication = new VakantieVerblijvenApplication(domainManager); 
+
         }
     }
 

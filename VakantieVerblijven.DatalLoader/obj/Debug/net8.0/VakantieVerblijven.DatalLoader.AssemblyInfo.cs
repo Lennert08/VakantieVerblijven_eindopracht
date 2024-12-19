@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VakantieVerblijven.DatalLoader")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2906c2b0b4344edcfd3fec9e65c70e99ab077f5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+621a423318f3105e95908242202b750724a875c2")]
 [assembly: System.Reflection.AssemblyProductAttribute("VakantieVerblijven.DatalLoader")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VakantieVerblijven.DatalLoader")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

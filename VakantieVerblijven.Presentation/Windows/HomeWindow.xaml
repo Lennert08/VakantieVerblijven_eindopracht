@@ -1,0 +1,35 @@
+﻿<Window x:Class="VakantieVerblijven.Presentation.Windows.HomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VakantieVerblijven.Presentation.Windows"
+        mc:Ignorable="d"
+        Title="Home" Height="450" Width="800" MinHeight="430" MinWidth="680">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="90*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Navigatiebar -->
+        <StackPanel Background="MidnightBlue" Orientation="Horizontal">
+            <Button Content="Home" Background="MidnightBlue" Foreground="SkyBlue" Width="100" BorderThickness="0" FontFamily="Verdana" FontSize="15" />
+            <Button Content="Reservaties" Background="MidnightBlue" Foreground="White" Width="100" BorderThickness="0" FontFamily="Verdana" FontSize="15"/>
+            <Button Content="Huizen" Background="MidnightBlue" Foreground="White" Width="100" BorderThickness="0" FontFamily="Verdana" FontSize="15"/>
+        </StackPanel>
+
+        <!-- 2 main buttons -->
+        <Viewbox Grid.Row="1">
+            <!-- viewbox zorgt ervoor dat de fontsize ook scaled met de window -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Width="170" Margin="20,90,20,90" Content="Reservatie aanmaken" Grid.Column="0" FontSize="8" FontFamily="Verdana" Background="MidnightBlue" Foreground="White" FontWeight="Bold"/>
+                <Button Width="170" Padding="25" Margin="20,90,20,90" Content="Te Verplaatsen Reservaties" Grid.Column="1" FontSize="8" FontFamily="Verdana" Background="MidnightBlue" Foreground="White" FontWeight="Bold" />
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>

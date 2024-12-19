@@ -14,3 +14,14 @@ C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\Vakanti
 C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\refint\VakantieVerblijven.Presentation.dll
 C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\VakantieVerblijven.Presentation.pdb
 C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\ref\VakantieVerblijven.Presentation.dll
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\Windows\HomeWindow.g.cs
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\VakantieVerblijven.Presentation_MarkupCompile.cache
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\VakantieVerblijven.Presentation_MarkupCompile.lref
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\Windows\HomeWindow.baml
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\VakantieVerblijven.Presentation.g.resources
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\Windows\ReservatiesWindow.g.cs
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\Windows\ReservatiesWindow.baml
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\Windows\TeVerplaatsenResWindow.g.cs
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\Windows\TeVerplaatsenResWindow.baml
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\Windows\HuizenOverzichtWindow.g.cs
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\Windows\HuizenOverzichtWindow.baml
