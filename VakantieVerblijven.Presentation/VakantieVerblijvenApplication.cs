@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -11,6 +12,7 @@ namespace VakantieVerblijven.Presentation
 {
     public class VakantieVerblijvenApplication
     {
+        #region Fields + constructor
         private DomainManager _domainManager;
 
         //windows
@@ -26,14 +28,42 @@ namespace VakantieVerblijven.Presentation
             _homeWindow = new HomeWindow();
             _huizenOverzichtWindow = new HuizenOverzichtWindow();
             _teVerplaatsenResWindow = new TeVerplaatsenResWindow();
-            _reservatiesWindow.Show();
+
+            //linken van Window Navigators
+            _homeWindow.NavigationButtonClicked += NavigateToNextWindow;
+            _huizenOverzichtWindow.NavigationButtonClicked += NavigateToNextWindow;
+            _reservatiesWindow.NavigationButtonClicked += NavigateToNextWindow;
+            _teVerplaatsenResWindow.NavigationButtonClicked += NavigateToNextWindow;
+
+            _homeWindow.Show();
+        }
+        #endregion
+
+
+        #region WindowManager
+        private void NavigateToNextWindow(object? sender, string windowALsTag)
+        {
+           if (sender is Window teSluitenWindow)
+            {
+                switch (windowALsTag) {
+                    case "Reservatie":
+                        SchermManager.NavigateToNextWindow(teSluitenWindow, _reservatiesWindow);
+                        break;
+                    case "Huizen":
+                        SchermManager.NavigateToNextWindow(teSluitenWindow, _huizenOverzichtWindow);
+                        break;
+                    case "ReservatieVerplaats":
+                        SchermManager.NavigateToNextWindow(teSluitenWindow, _teVerplaatsenResWindow);
+                        break;
+                    case "Home":
+                        SchermManager.NavigateToNextWindow(teSluitenWindow, _homeWindow);
+                        break;
+                }
+            }
         }
 
-     
-
-        #region Window1
-
-
         #endregion
+
+
     }
 }

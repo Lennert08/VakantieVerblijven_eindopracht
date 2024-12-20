@@ -14,9 +14,9 @@
 
         <!-- Navigatiebar -->
         <StackPanel Background="MidnightBlue" Orientation="Horizontal">
-            <Button Content="Home" Background="MidnightBlue" Foreground="SkyBlue" Width="100" BorderThickness="0" FontFamily="Verdana" FontSize="15" />
-            <Button Content="Reservaties" Background="MidnightBlue" Foreground="White" Width="100" BorderThickness="0" FontFamily="Verdana" FontSize="15"/>
-            <Button Content="Huizen" Background="MidnightBlue" Foreground="White" Width="100" BorderThickness="0" FontFamily="Verdana" FontSize="15"/>
+            <Button Content="Home" Foreground="SkyBlue" Width="100" BorderThickness="0"  FontSize="15"/>
+            <Button Content="Reservaties"  Width="100" BorderThickness="0"  FontSize="15" Click="NavigateToNextWindow" Tag="Reservatie" />
+            <Button Content="Huizen" Width="100" BorderThickness="0"  FontSize="15" Tag="Huizen" Click="NavigateToNextWindow" />
         </StackPanel>
 
         <!-- 2 main buttons -->
@@ -27,8 +27,8 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Width="170" Margin="20,90,20,90" Content="Reservatie aanmaken" Grid.Column="0" FontSize="8" FontFamily="Verdana" Background="MidnightBlue" Foreground="White" FontWeight="Bold"/>
-                <Button Width="170" Padding="25" Margin="20,90,20,90" Content="Te Verplaatsen Reservaties" Grid.Column="1" FontSize="8" FontFamily="Verdana" Background="MidnightBlue" Foreground="White" FontWeight="Bold" />
+                <Button Width="170" Margin="20,90,20,90" Content="Reservatie aanmaken" Grid.Column="0" FontSize="8" FontWeight="Bold"/>
+                <Button Width="170" Padding="25" Margin="20,90,20,90" Content="Te Verplaatsen Reservaties" Grid.Column="1" FontSize="8"  FontWeight="Bold" Click="NavigateToNextWindow" Tag="ReservatieVerplaats"/>
             </Grid>
         </Viewbox>
     </Grid>

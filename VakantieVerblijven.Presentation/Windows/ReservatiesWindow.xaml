@@ -14,9 +14,9 @@
 
         <!-- Navigatiebar -->
         <StackPanel Background="MidnightBlue" Orientation="Horizontal">
-            <Button Content="Home" Background="MidnightBlue" Foreground="White" Width="100" BorderThickness="0" FontFamily="Verdana" FontSize="15"/>
-            <Button Content="Reservaties" Background="MidnightBlue" Foreground="SkyBlue" Width="100" BorderThickness="0" FontFamily="Verdana" FontSize="15"/>
-            <Button Content="Huizen" Background="MidnightBlue" Foreground="White" Width="100" BorderThickness="0" FontFamily="Verdana" FontSize="15"/>
+            <Button Content="Home" Width="100" BorderThickness="0" FontSize="15" Click="NavigateToNextWindow" Tag="Home"/>
+            <Button Content="Reservaties"  Foreground="SkyBlue" Width="100" BorderThickness="0" FontSize="15"/>
+            <Button Content="Huizen" Width="100" BorderThickness="0" FontSize="15" Click="NavigateToNextWindow" Tag="Huizen"/>
         </StackPanel>
 
         <Grid Grid.Row="1">
@@ -58,15 +58,15 @@
                 <DatePicker Margin="15,5,15,10" Grid.Column="1" Grid.Row="1" FontFamily="Verdana"/>
                 <DatePicker Margin="15,5,15,10" Grid.Column="2" Grid.Row="1" FontFamily="Verdana"/>
                 <TextBox Grid.Column="3" Margin="15,5,15,10" Grid.Row="1" FontFamily="Verdana"/>
-                <Button Content="Zoek" Grid.Column="4"  Margin="15,5,15,10" Grid.Row="1" FontFamily="Verdana" Background="MidnightBlue" Foreground="White" FontWeight="Bold"/>
+                <Button Content="Zoek" Grid.Column="4"  Margin="15,5,15,10" Grid.Row="1" FontWeight="Bold"/>
             </Grid>
 
             <!-- Lijst met reservaties -->
 
             <DataGrid ItemsSource="{Binding Reservaties}" AutoGenerateColumns="False" Grid.Row="1">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ReservatieId" Binding="{Binding ReservatieId}"/>
-                    <DataGridTextColumn Header="Klant" Binding="{Binding Klant.Naam}"/>
+                    <DataGridTextColumn Header="Van" Binding="{Binding Startdatum}"/>
+                    <DataGridTextColumn Header="Tot" Binding="{Binding EinDatum}"/>
                     <DataGridTextColumn Header="Van" Binding="{Binding Van}"/>
                     <DataGridTextColumn Header="Tot" Binding="{Binding Tot}"/>
                     <DataGridTextColumn Header="Aantal Personen" Binding="{Binding AantalPersonen}"/>

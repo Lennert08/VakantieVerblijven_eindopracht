@@ -23,3 +23,6 @@ C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\Vakanti
 C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.StartUp\obj\Debug\net8.0-windows\VakantieVerblijven.StartUp.pdb
 C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.StartUp\obj\Debug\net8.0-windows\VakantieVerblijven.StartUp.genruntimeconfig.cache
 C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.StartUp\obj\Debug\net8.0-windows\ref\VakantieVerblijven.StartUp.dll
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.StartUp\obj\Debug\net8.0-windows\VakantieVerblijven.StartUp_MarkupCompile.lref
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.StartUp\obj\Debug\net8.0-windows\App.baml
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.StartUp\obj\Debug\net8.0-windows\VakantieVerblijven.StartUp.g.resources

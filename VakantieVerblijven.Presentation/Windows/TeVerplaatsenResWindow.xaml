@@ -14,9 +14,9 @@
 
         <!-- Navigatiebar -->
         <StackPanel Background="MidnightBlue" Orientation="Horizontal">
-            <Button Content="Home" Background="MidnightBlue" Foreground="White" Width="100" BorderThickness="0" FontFamily="Verdana" FontSize="15"/>
-            <Button Content="Reservaties" Background="MidnightBlue" Foreground="White" Width="100" BorderThickness="0" FontFamily="Verdana" FontSize="15"/>
-            <Button Content="Huizen" Background="MidnightBlue" Foreground="White" Width="100" BorderThickness="0" FontFamily="Verdana" FontSize="15"/>
+            <Button Content="Home" Width="100" BorderThickness="0" FontSize="15" Click="NavigateToNextWindow" Tag="Home"/>
+            <Button Content="Reservaties" Width="100" BorderThickness="0" FontSize="15" Click="NavigateToNextWindow" Tag="Reservatie"/>
+            <Button Content="Huizen" Width="100" BorderThickness="0" FontSize="15" Click="NavigateToNextWindow" Tag="Huizen"/>
         </StackPanel>
 
         <!-- Titel + ReservatieLijst -->

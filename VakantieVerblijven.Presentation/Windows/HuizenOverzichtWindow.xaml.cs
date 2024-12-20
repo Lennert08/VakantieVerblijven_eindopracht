@@ -19,9 +19,18 @@ namespace VakantieVerblijven.Presentation.Windows
     /// </summary>
     public partial class HuizenOverzichtWindow : Window
     {
+        public event EventHandler<string> NavigationButtonClicked;
         public HuizenOverzichtWindow()
         {
             InitializeComponent();
+        }
+
+        private void NavigateToNextWindow(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                NavigationButtonClicked?.Invoke(this, button.Tag as string);
+            }
         }
     }
 }

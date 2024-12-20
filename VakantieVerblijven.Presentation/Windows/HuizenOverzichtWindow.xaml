@@ -14,9 +14,9 @@
 
         <!-- Navigatiebar -->
         <StackPanel Background="MidnightBlue" Orientation="Horizontal">
-            <Button Content="Home" Background="MidnightBlue" Foreground="White" Width="100" BorderThickness="0" FontFamily="Verdana" FontSize="15"/>
-            <Button Content="Reservaties" Background="MidnightBlue" Foreground="White" Width="100" BorderThickness="0" FontFamily="Verdana" FontSize="15"/>
-            <Button Content="Huizen" Background="MidnightBlue" Foreground="SkyBlue" Width="100" BorderThickness="0" FontFamily="Verdana" FontSize="15"/>
+            <Button Content="Home" Width="100" BorderThickness="0"  FontSize="15" Click="NavigateToNextWindow" Tag="Home"/>
+            <Button Content="Reservaties"  Width="100" BorderThickness="0"  FontSize="15" Click="NavigateToNextWindow" Tag="Reservatie"/>
+            <Button Content="Huizen" Foreground="SkyBlue" Width="100" BorderThickness="0" FontSize="15"/>
         </StackPanel>
 
         <!-- Buttons + huizenLijst -->
@@ -26,7 +26,7 @@
                 <RowDefinition Height="85*"/>
             </Grid.RowDefinitions>
 
-            <Button Margin="180,7,180,7" Content="Voeg toe aan onderhoud" FontFamily="Verdana" Background="MidnightBlue" Foreground="White" FontWeight="Bold"/>
+            <Button Margin="180,7,180,7" Content="Voeg toe aan onderhoud" FontWeight="Bold"/>
 
             <DataGrid AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1">
                 <DataGrid.Columns>

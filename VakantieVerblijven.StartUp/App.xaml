@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:VakantieVerblijven.StartUp"
              Startup="Application_Startup">
     <Application.Resources>
-         
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="MidnightBlue" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontFamily" Value="Verdana" />
+        </Style>
     </Application.Resources>
 </Application>
