@@ -2,6 +2,8 @@
 using System.Data;
 using System.Windows;
 using VakantieVerblijven.Domain;
+using VakantieVerblijven.Domain.Repositories;
+using VakantieVerblijven.Persistence.Mappers;
 using VakantieVerblijven.Presentation;
 
 namespace VakantieVerblijven.StartUp
@@ -13,9 +15,9 @@ namespace VakantieVerblijven.StartUp
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            DomainManager domainManager = new DomainManager();
+            ReservatieMapper reservatieMapper = new ReservatieMapper();
+            DomainManager domainManager = new DomainManager(reservatieMapper);
             VakantieVerblijvenApplication vakantieVerblijvenApplication = new VakantieVerblijvenApplication(domainManager); 
-
         }
     }
 

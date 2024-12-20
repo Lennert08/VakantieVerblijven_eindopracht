@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VakantieVerblijven.Domain.Model;
 
 namespace VakantieVerblijven.Presentation.Windows
 {
@@ -20,9 +21,10 @@ namespace VakantieVerblijven.Presentation.Windows
     public partial class ReservatiesWindow : Window
     {
         public event EventHandler<string> NavigationButtonClicked;
-        public ReservatiesWindow()
+        public ReservatiesWindow(List<Reservatie> reservatieList)
         {
             InitializeComponent();
+            ReservatieLijst.ItemsSource = reservatieList;
         }
         private void NavigateToNextWindow(object sender, RoutedEventArgs e)
         {

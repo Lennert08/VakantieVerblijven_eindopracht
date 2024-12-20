@@ -24,7 +24,7 @@ namespace VakantieVerblijven.Presentation
         public VakantieVerblijvenApplication(DomainManager domainManager)
         {
             _domainManager = domainManager;
-            _reservatiesWindow = new ReservatiesWindow();
+            _reservatiesWindow = new ReservatiesWindow(_domainManager.GetReservatiesByMonth(DateTime.Today)); //haalt alle reseravties van de huidige maand op 
             _homeWindow = new HomeWindow();
             _huizenOverzichtWindow = new HuizenOverzichtWindow();
             _teVerplaatsenResWindow = new TeVerplaatsenResWindow();

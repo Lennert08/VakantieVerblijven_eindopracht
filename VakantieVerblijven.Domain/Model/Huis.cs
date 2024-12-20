@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace VakantieVerblijven.Domain.Model
 {
-    internal class Huis
+    public class Huis
     {
         private int _id;
         private string _straat;
@@ -37,7 +37,7 @@ namespace VakantieVerblijven.Domain.Model
             get => _nummer;
             set
             {
-                ArgumentOutOfRangeException.ThrowIfNegativeOrZero(value);
+                ArgumentOutOfRangeException.ThrowIfNegative(value);
                 _nummer = value;
             }
         }
@@ -51,6 +51,7 @@ namespace VakantieVerblijven.Domain.Model
             }
         }
         public bool Actief { get; set; }
+        public string VolledigAdres => $"{Straat} {Nummer}";
 
         public Huis(int id, string straat, int nummer, bool actief, int aantalPersonen)
         {

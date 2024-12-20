@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VakantieVerblijven.Domain.Model
 {
-    internal class Klant
+    public class Klant
     {
         private int _id;
         private string _naam;

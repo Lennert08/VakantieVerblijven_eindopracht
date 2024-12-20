@@ -63,15 +63,12 @@
 
             <!-- Lijst met reservaties -->
 
-            <DataGrid ItemsSource="{Binding Reservaties}" AutoGenerateColumns="False" Grid.Row="1">
+            <DataGrid ItemsSource="{Binding Reservaties}" AutoGenerateColumns="False" Grid.Row="1" Name="ReservatieLijst" IsReadOnly="True">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Van" Binding="{Binding Startdatum}"/>
-                    <DataGridTextColumn Header="Tot" Binding="{Binding EinDatum}"/>
-                    <DataGridTextColumn Header="Van" Binding="{Binding Van}"/>
-                    <DataGridTextColumn Header="Tot" Binding="{Binding Tot}"/>
-                    <DataGridTextColumn Header="Aantal Personen" Binding="{Binding AantalPersonen}"/>
-                    <DataGridTextColumn Header="Prijs" Binding="{Binding Prijs}"/>
-                    <DataGridTextColumn Header="Betaald" Binding="{Binding Betaald}"/>
+                    <DataGridTextColumn Header="Van" Binding="{Binding FormattedStartDatum}"/>
+                    <DataGridTextColumn Header="Tot" Binding="{Binding FormattedEindDatum}"/>
+                    <DataGridTextColumn Header="Klant" Binding="{Binding Klant.Naam}"/>
+                    <DataGridTextColumn Header="Huis" Binding="{Binding Huis.VolledigAdres}"/>
                 </DataGrid.Columns>
             </DataGrid>
 
