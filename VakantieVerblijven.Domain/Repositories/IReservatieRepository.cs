@@ -9,6 +9,7 @@ namespace VakantieVerblijven.Domain.Repositories
 {
     public interface IReservatieRepository
     {
+        List<Reservatie> GetProbleemReservaties();
         List<Reservatie> GetReservatiesByMonth(DateTime date);
     }
 }

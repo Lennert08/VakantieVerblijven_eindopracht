@@ -51,7 +51,10 @@ namespace VakantieVerblijven.Domain.Model
             }
         }
         public bool Actief { get; set; }
+        public Park Park { get; set; }
         public string VolledigAdres => $"{Straat} {Nummer}";
+        public string OnderhoudStatus => Actief ? "Geen onderhoud" : "In onderhoud";
+
 
         public Huis(int id, string straat, int nummer, bool actief, int aantalPersonen)
         {
@@ -60,6 +63,20 @@ namespace VakantieVerblijven.Domain.Model
             Nummer = nummer;
             Actief = actief;
             AantalPersonen = aantalPersonen;
+        }
+        public Huis (int id, string straat, int nummer, bool actief, int aantalPersonen, Park park) : this(id, straat, nummer, actief, aantalPersonen)
+        {
+            Park = park;
+        }
+        public override bool Equals(object? obj)
+        {
+            return obj is Huis huis &&
+                   Id == huis.Id;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id);
         }
     }
 }

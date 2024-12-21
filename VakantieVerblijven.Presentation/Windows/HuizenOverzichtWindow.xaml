@@ -26,14 +26,14 @@
                 <RowDefinition Height="85*"/>
             </Grid.RowDefinitions>
 
-            <Button Margin="180,7,180,7" Content="Voeg toe aan onderhoud" FontWeight="Bold"/>
+            <Button Margin="180,7,180,7" Content="Voeg toe aan onderhoud" FontWeight="Bold" Name="OnderhoudButton" IsEnabled="False" />
 
-            <DataGrid AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1">
+            <DataGrid Name="HuisDataGrid" Grid.Row="1" ColumnWidth="150" SelectionChanged="HuisDataGrid_SelectionChanged" >
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Straat" Binding="{Binding Straat}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Nr" Binding="{Binding Nr}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Max Personen" Binding="{Binding Stad}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Status" Binding="{Binding Stad}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Adres" Binding="{Binding VolledigAdres}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Max personen" Binding="{Binding AantalPersonen}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Park" Binding="{Binding Park.Naam}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Status" Binding="{Binding OnderhoudStatus}" IsReadOnly="True"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>

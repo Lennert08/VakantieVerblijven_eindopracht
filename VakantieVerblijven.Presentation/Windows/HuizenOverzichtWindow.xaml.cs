@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VakantieVerblijven.Domain.Model;
 
 namespace VakantieVerblijven.Presentation.Windows
 {
@@ -20,9 +21,11 @@ namespace VakantieVerblijven.Presentation.Windows
     public partial class HuizenOverzichtWindow : Window
     {
         public event EventHandler<string> NavigationButtonClicked;
-        public HuizenOverzichtWindow()
+        public event EventHandler<Huis> HuisSelected;   
+        public HuizenOverzichtWindow(List<Huis> huizen)
         {
             InitializeComponent();
+            HuisDataGrid.ItemsSource = huizen;
         }
 
         private void NavigateToNextWindow(object sender, RoutedEventArgs e)
@@ -30,6 +33,17 @@ namespace VakantieVerblijven.Presentation.Windows
             if (sender is Button button)
             {
                 NavigationButtonClicked?.Invoke(this, button.Tag as string);
+            }
+        }
+
+        private void HuisDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (sender is DataGrid dataGrid)
+            {
+                if (dataGrid.SelectedItem is Huis huis)
+                {
+                    HuisSelected?.Invoke(this, huis);
+                }
             }
         }
     }

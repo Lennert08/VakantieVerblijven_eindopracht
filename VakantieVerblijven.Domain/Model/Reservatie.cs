@@ -33,5 +33,16 @@ namespace VakantieVerblijven.Domain.Model
             Klant = klant;
             Huis = huis;
         }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is Reservatie reservatie &&
+                   Id == reservatie.Id;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id);
+        }
     }
 }

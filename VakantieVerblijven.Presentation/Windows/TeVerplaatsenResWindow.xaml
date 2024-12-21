@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VakantieVerblijven.Presentation.Windows"
         mc:Ignorable="d"
-        Title="TeVerplaatsenResWindow" Height="450" Width="800">
+        Title="TeVerplaatsenResWindow" Height="450" Width="800" MinHeight="430" MinWidth="680">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
@@ -29,12 +29,13 @@
 
             <TextBlock Text="Te Behandelen Reservaties" FontSize="20" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Center" Margin="5" FontFamily="Verdana" HorizontalAlignment="Center"/>
 
-            <DataGrid AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1">
+            <DataGrid ItemsSource="{Binding Reservaties}" Grid.Row="1" Name="ReservatieLijst" ColumnWidth="150">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Straat" Binding="{Binding Straat}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Nr" Binding="{Binding Nr}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Max Personen" Binding="{Binding Stad}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Status" Binding="{Binding Stad}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Van" Binding="{Binding FormattedStartDatum}"/>
+                    <DataGridTextColumn Header="Tot" Binding="{Binding FormattedEindDatum}"/>
+                    <DataGridTextColumn Header="Klant" Binding="{Binding Klant.Naam}"/>
+                    <DataGridTextColumn Header="Huis" Binding="{Binding Huis.VolledigAdres}"/>
+                    <DataGridTextColumn Header="Status" Binding="{Binding Huis.OnderhoudStatus}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>

@@ -9,5 +9,15 @@
             <Setter Property="Foreground" Value="White" />
             <Setter Property="FontFamily" Value="Verdana" />
         </Style>
+        <Style TargetType="DataGrid">
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="AlternatingRowBackground" Value="LightBlue" />
+            <Setter Property="RowBackground" Value="White" />
+            <Setter Property="GridLinesVisibility" Value="None" />
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="IsReadOnly" Value="True" />
+            <Setter Property="AutoGenerateColumns" Value="False" />
+            <Setter Property="SelectionMode" Value="Single"/>
+        </Style>
     </Application.Resources>
 </Application>

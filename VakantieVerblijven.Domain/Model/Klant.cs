@@ -46,5 +46,16 @@ namespace VakantieVerblijven.Domain.Model
             Naam = naam;
             Adres = adres;
         }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is Klant klant &&
+                   Id == klant.Id;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id);
+        }
     }
 }

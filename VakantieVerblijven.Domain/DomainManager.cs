@@ -11,14 +11,26 @@ namespace VakantieVerblijven.Domain
     public class DomainManager
     {
         private IReservatieRepository _reservatieRepository;
-        public DomainManager(IReservatieRepository reservatieRepository)
+        private IHuisRepository _huisRepository;
+
+        public DomainManager(IReservatieRepository reservatieRepository, IHuisRepository huisRepository)
         {
             _reservatieRepository = reservatieRepository;
+            _huisRepository = huisRepository;
         }
 
         public List<Reservatie> GetReservatiesByMonth(DateTime date)
         {
             return _reservatieRepository.GetReservatiesByMonth(date);
+        }
+        public List<Huis> GetAllHuizen()
+        {
+            return _huisRepository.GetAllHuizen();
+        }
+
+        public List<Reservatie> GetProbleemReservaties()
+        {
+            return _reservatieRepository.GetProbleemReservaties();
         }
     }
 }

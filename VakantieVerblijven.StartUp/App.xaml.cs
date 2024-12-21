@@ -16,7 +16,8 @@ namespace VakantieVerblijven.StartUp
         private void Application_Startup(object sender, StartupEventArgs e)
         {
             ReservatieMapper reservatieMapper = new ReservatieMapper();
-            DomainManager domainManager = new DomainManager(reservatieMapper);
+            HuisMapper huisMapper = new HuisMapper();
+            DomainManager domainManager = new DomainManager(reservatieMapper, huisMapper);
             VakantieVerblijvenApplication vakantieVerblijvenApplication = new VakantieVerblijvenApplication(domainManager); 
         }
     }

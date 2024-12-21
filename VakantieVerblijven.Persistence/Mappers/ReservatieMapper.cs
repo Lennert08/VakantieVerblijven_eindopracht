@@ -102,5 +102,85 @@ namespace VakantieVerblijven.Persistence.Mappers
 
             return reservaties;
         }
+
+        public List<Reservatie> GetProbleemReservaties()
+        {
+            List<Reservatie> reservaties = new List<Reservatie>();
+
+            string query = @"
+    SELECT 
+        r.Id AS ReservatieId,
+        r.StartDatum,
+        r.EindDatum,
+        r.klant_nummer AS KlantNummer,
+        k.Id AS KlantId,
+        k.Naam AS KlantNaam,
+        k.Adres AS KlantAdres,
+        h.Id AS HuisId,
+        h.Straat,
+        h.Nummer,
+        h.Aantal_Personen AS AantalPersonen,
+        h.Actief AS HuisActief
+    FROM 
+        Reservaties r
+    INNER JOIN 
+        Klanten k ON r.klant_nummer = k.Id
+    INNER JOIN 
+        Huis_Reservaties hr ON r.Id = hr.reservatie_id
+    INNER JOIN 
+        Huizen h ON hr.huis_id = h.Id
+    WHERE 
+        h.Actief = 0
+        AND r.StartDatum >= @Vandaag
+    ORDER BY 
+        r.StartDatum;";
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Voeg de parameter voor vandaag toe
+                    command.Parameters.AddWithValue("@Vandaag", DateTime.Today);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Haal reservatiegegevens op
+                            int reservatieId = (int)reader["ReservatieId"];
+                            DateTime startDatum = (DateTime)reader["StartDatum"];
+                            DateTime eindDatum = (DateTime)reader["EindDatum"];
+                            int klantNummer = (int)reader["KlantNummer"];
+
+                            // Haal klantgegevens op
+                            int klantId = (int)reader["KlantId"];
+                            string klantNaam = reader["KlantNaam"].ToString();
+                            string klantAdres = reader["KlantAdres"].ToString();
+
+                            // Haal huisgegevens op
+                            int huisId = (int)reader["HuisId"];
+                            string straat = reader["Straat"].ToString();
+                            int nummer = (int)reader["Nummer"];
+                            int aantalPersonen = (int)reader["AantalPersonen"];
+                            bool huisActief = (bool)reader["HuisActief"];
+
+                            // Maak Klant en Huis objecten
+                            Klant klant = new Klant(klantId, klantNaam, klantAdres);
+                            Huis huis = new Huis(huisId, straat, nummer, huisActief, aantalPersonen);
+
+                            // Maak Reservatie object en voeg toe aan lijst
+                            Reservatie reservatie = new Reservatie(reservatieId, startDatum, eindDatum, klant, huis);
+                            reservaties.Add(reservatie);
+                        }
+                    }
+                }
+            }
+
+            return reservaties;
+        }
+
+
     }
 }

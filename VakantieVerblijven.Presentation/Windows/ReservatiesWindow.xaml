@@ -63,7 +63,7 @@
 
             <!-- Lijst met reservaties -->
 
-            <DataGrid ItemsSource="{Binding Reservaties}" AutoGenerateColumns="False" Grid.Row="1" Name="ReservatieLijst" IsReadOnly="True">
+            <DataGrid ItemsSource="{Binding Reservaties}" Grid.Row="1" Name="ReservatieLijst" ColumnWidth="150">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Van" Binding="{Binding FormattedStartDatum}"/>
                     <DataGridTextColumn Header="Tot" Binding="{Binding FormattedEindDatum}"/>
