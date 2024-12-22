@@ -46,6 +46,10 @@ namespace VakantieVerblijven.Domain.Model
             Naam = naam;
             Locatie = locatie;
         }
+        public override string ToString()
+        {
+            return $"{Naam} ({Locatie})";
+        }
 
         public override bool Equals(object? obj)
         {

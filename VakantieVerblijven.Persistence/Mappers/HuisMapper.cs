@@ -11,7 +11,7 @@ namespace VakantieVerblijven.Persistence.Mappers
 {
     public class HuisMapper : IHuisRepository
     {
-        private string _tableName = "Reservaties";
+        private string _tableName = "Huizen";
         private SqlConnection _connection;
         private const string _connectionString = DbInfo.ConnectionString;
 

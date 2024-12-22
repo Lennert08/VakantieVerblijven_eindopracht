@@ -27,7 +27,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Width="170" Margin="20,90,20,90" Content="Reservatie aanmaken" Grid.Column="0" FontSize="8" FontWeight="Bold"/>
+                <Button Width="170" Margin="20,90,20,90" Content="Reservatie aanmaken" Grid.Column="0" FontSize="8" FontWeight="Bold" Tag="ParkSelectie" Click="NavigateToNextWindow"/>
                 <Button Width="170" Padding="25" Margin="20,90,20,90" Content="Te Verplaatsen Reservaties" Grid.Column="1" FontSize="8"  FontWeight="Bold" Click="NavigateToNextWindow" Tag="ReservatieVerplaats"/>
             </Grid>
         </Viewbox>

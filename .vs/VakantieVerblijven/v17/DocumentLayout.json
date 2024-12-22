@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.presentation\\windows\\huizenoverzichtwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|solutionrelative:vakantieverblijven.presentation\\windows\\huizenoverzichtwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.presentation\\windows\\huizenoverzichtwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|solutionrelative:vakantieverblijven.presentation\\windows\\huizenoverzichtwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.presentation\\vakantieverblijvenapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|solutionrelative:vakantieverblijven.presentation\\vakantieverblijvenapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.presentation\\windows\\reservatieswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|solutionrelative:vakantieverblijven.presentation\\windows\\reservatieswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,52 +22,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ReservatiesWindow.xaml",
-              "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\ReservatiesWindow.xaml",
-              "RelativeDocumentMoniker": "VakantieVerblijven.Presentation\\Windows\\ReservatiesWindow.xaml",
-              "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\ReservatiesWindow.xaml",
-              "RelativeToolTip": "VakantieVerblijven.Presentation\\Windows\\ReservatiesWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-21T03:21:46.979Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HuizenOverzichtWindow.xaml.cs",
-              "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\HuizenOverzichtWindow.xaml.cs",
-              "RelativeDocumentMoniker": "VakantieVerblijven.Presentation\\Windows\\HuizenOverzichtWindow.xaml.cs",
-              "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\HuizenOverzichtWindow.xaml.cs",
-              "RelativeToolTip": "VakantieVerblijven.Presentation\\Windows\\HuizenOverzichtWindow.xaml.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAUwC8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T02:59:06.784Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "VakantieVerblijvenApplication.cs",
               "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\VakantieVerblijvenApplication.cs",
               "RelativeDocumentMoniker": "VakantieVerblijven.Presentation\\VakantieVerblijvenApplication.cs",
               "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\VakantieVerblijvenApplication.cs",
               "RelativeToolTip": "VakantieVerblijven.Presentation\\VakantieVerblijvenApplication.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAUwEkAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T02:59:00.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HuizenOverzichtWindow.xaml",
-              "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\HuizenOverzichtWindow.xaml",
-              "RelativeDocumentMoniker": "VakantieVerblijven.Presentation\\Windows\\HuizenOverzichtWindow.xaml",
-              "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\HuizenOverzichtWindow.xaml",
-              "RelativeToolTip": "VakantieVerblijven.Presentation\\Windows\\HuizenOverzichtWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-21T02:58:58.285Z",
+              "WhenOpened": "2024-12-22T05:23:15.262Z",
               "EditorCaption": ""
             }
           ]

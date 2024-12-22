@@ -108,7 +108,7 @@ namespace VakantieVerblijven.Persistence.Mappers
             List<Reservatie> reservaties = new List<Reservatie>();
 
             string query = @"
-    SELECT 
+        SELECT 
         r.Id AS ReservatieId,
         r.StartDatum,
         r.EindDatum,
@@ -121,18 +121,18 @@ namespace VakantieVerblijven.Persistence.Mappers
         h.Nummer,
         h.Aantal_Personen AS AantalPersonen,
         h.Actief AS HuisActief
-    FROM 
+        FROM 
         Reservaties r
-    INNER JOIN 
+        INNER JOIN 
         Klanten k ON r.klant_nummer = k.Id
-    INNER JOIN 
+        INNER JOIN 
         Huis_Reservaties hr ON r.Id = hr.reservatie_id
-    INNER JOIN 
+        INNER JOIN 
         Huizen h ON hr.huis_id = h.Id
-    WHERE 
+        WHERE 
         h.Actief = 0
         AND r.StartDatum >= @Vandaag
-    ORDER BY 
+        ORDER BY 
         r.StartDatum;";
 
             using (SqlConnection connection = new SqlConnection(_connectionString))

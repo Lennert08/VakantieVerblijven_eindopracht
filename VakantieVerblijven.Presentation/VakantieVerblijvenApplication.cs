@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using VakantieVerblijven.Domain;
+using VakantieVerblijven.Domain.Classes;
 using VakantieVerblijven.Domain.Model;
 using VakantieVerblijven.Presentation.Windows;
 
@@ -22,6 +23,7 @@ namespace VakantieVerblijven.Presentation
         private ReservatiesWindow _reservatiesWindow;
         private HuizenOverzichtWindow _huizenOverzichtWindow;
         private TeVerplaatsenResWindow _teVerplaatsenResWindow;
+        private ParkSelectieScherm _parkSelectieScherm;
 
         public VakantieVerblijvenApplication(DomainManager domainManager)
         {
@@ -30,18 +32,22 @@ namespace VakantieVerblijven.Presentation
             _homeWindow = new HomeWindow();
             _huizenOverzichtWindow = new HuizenOverzichtWindow(_domainManager.GetAllHuizen());
             _teVerplaatsenResWindow = new TeVerplaatsenResWindow(_domainManager.GetProbleemReservaties());
+            _parkSelectieScherm = new ParkSelectieScherm(_domainManager.GetAlleFaciliteiten(),_domainManager.GetAllParken());
 
             //linken van Window Navigators
             _homeWindow.NavigationButtonClicked += NavigateToNextWindow;
             _huizenOverzichtWindow.NavigationButtonClicked += NavigateToNextWindow;
             _reservatiesWindow.NavigationButtonClicked += NavigateToNextWindow;
             _teVerplaatsenResWindow.NavigationButtonClicked += NavigateToNextWindow;
+            _parkSelectieScherm.NavigationButtonClicked += NavigateToNextWindow;
 
             //linken van alle andere events
             _huizenOverzichtWindow.HuisSelected += UpdateOnderhoudButton;
+            _parkSelectieScherm.CheckboxChecked += UpdateParkLijst;
 
             _homeWindow.Show();
         }
+
         #endregion
 
 
@@ -62,6 +68,9 @@ namespace VakantieVerblijven.Presentation
                         break;
                     case "Home":
                         SchermManager.NavigateToNextWindow(teSluitenWindow, _homeWindow);
+                        break;
+                    case "ParkSelectie":
+                        SchermManager.NavigateToNextWindow(teSluitenWindow, _parkSelectieScherm);
                         break;
                 }
             }
@@ -96,6 +105,30 @@ namespace VakantieVerblijven.Presentation
         #region TeVerplaatsenResWindow
 
         #endregion
+
+        #region ParkSelectieScherm
+        private void UpdateParkLijst(object? sender, EventArgs e)
+        {
+            if (_parkSelectieScherm.heeftGeenVoorkeur) // als er geen voorkeur is tonen we de standaard parken
+            {
+                _parkSelectieScherm.ParkenLijst.ItemsSource = _parkSelectieScherm._standaardParken;
+            } else
+            {
+                bool isStatusLijstLeeg = !_parkSelectieScherm._faciliteitenStatus.Values.Contains(true);
+
+                if (isStatusLijstLeeg)
+                {
+                    _parkSelectieScherm.ParkenLijst.ItemsSource = null; //lijst leegmaken want er is niks geselecteerd
+                } else
+                {
+                    List<Faciliteit> gekozenFaciliteiten = ListConverter.ConvertFaciliteitDictionaryToList(_parkSelectieScherm._faciliteitenStatus);
+                    _parkSelectieScherm.ParkenLijst.ItemsSource = _domainManager.GetParkenByFaciliteiten(gekozenFaciliteiten);
+                }
+
+            }
+        }
+        #endregion
+
 
     }
 }

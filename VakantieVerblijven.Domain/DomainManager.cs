@@ -12,11 +12,15 @@ namespace VakantieVerblijven.Domain
     {
         private IReservatieRepository _reservatieRepository;
         private IHuisRepository _huisRepository;
+        private IFaciliteitRepository _faciliteitRepository;
+        private IParkRepository _parkRepository;
 
-        public DomainManager(IReservatieRepository reservatieRepository, IHuisRepository huisRepository)
+        public DomainManager(IReservatieRepository reservatieRepository, IHuisRepository huisRepository, IFaciliteitRepository faciliteitRepository, IParkRepository parkRepository)
         {
             _reservatieRepository = reservatieRepository;
             _huisRepository = huisRepository;
+            _faciliteitRepository = faciliteitRepository;
+            _parkRepository = parkRepository;
         }
 
         public List<Reservatie> GetReservatiesByMonth(DateTime date)
@@ -31,6 +35,19 @@ namespace VakantieVerblijven.Domain
         public List<Reservatie> GetProbleemReservaties()
         {
             return _reservatieRepository.GetProbleemReservaties();
+        }
+
+        public List<Faciliteit> GetAlleFaciliteiten()
+        {
+            return _faciliteitRepository.GetAlleFaciliteiten();
+        }
+        public List<Park> GetAllParken()
+        {
+            return _parkRepository.GetAllParks();
+        }
+        public List<Park> GetParkenByFaciliteiten(List<Faciliteit> faciliteiten)
+        {
+            return _parkRepository.GetParksByFacilities(faciliteiten);
         }
     }
 }
