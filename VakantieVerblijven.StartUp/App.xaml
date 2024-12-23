@@ -34,5 +34,9 @@
         <Style TargetType="ListBox">
             <Setter Property="FontFamily" Value="Verdana"/>
         </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="FontFamily" Value="Verdana"/>
+        </Style>
     </Application.Resources>
 </Application>

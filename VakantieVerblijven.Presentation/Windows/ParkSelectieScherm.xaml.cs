@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using VakantieVerblijven.Domain.Model;
+using VakantieVerblijven.Domain.ValueObject;
 
 namespace VakantieVerblijven.Presentation.Windows
 {
@@ -21,11 +22,12 @@ namespace VakantieVerblijven.Presentation.Windows
     public partial class ParkSelectieScherm : Window
     {
         public event EventHandler<string> NavigationButtonClicked;
-        internal bool heeftGeenVoorkeur = true; // hier hou ik de status bij over een voorkeur is of niet
-        internal Dictionary<Faciliteit, bool> _faciliteitenStatus; // hier bijhouden wat gecheckt is en wat niet
-        internal List<Park> _standaardParken;
         public event EventHandler CheckboxChecked;
-        public ParkSelectieScherm(List<Faciliteit> faciliteiten, List<Park> standaardParken)
+        public event EventHandler<ParkVO> ParkSelected;
+        internal bool heeftGeenVoorkeur = true; // hier hou ik de status bij over een voorkeur is of niet
+        internal Dictionary<FaciliteitVO, bool> _faciliteitenStatus; // hier bijhouden wat gecheckt is en wat niet
+        internal List<ParkVO> _standaardParken;
+        public ParkSelectieScherm(List<FaciliteitVO> faciliteiten, List<ParkVO> standaardParken)
         {
             InitializeComponent();
             _standaardParken = standaardParken;
@@ -59,7 +61,7 @@ namespace VakantieVerblijven.Presentation.Windows
 
         private void UpdateFaciliteitStatusLijst(object sender, RoutedEventArgs e)
         {
-            if (sender is CheckBox checkBox && checkBox.DataContext is Faciliteit faciliteit)
+            if (sender is CheckBox checkBox && checkBox.DataContext is FaciliteitVO faciliteit)
             {
                 //hier veranderen we de bool status van false naar true of true naar false
                 _faciliteitenStatus[faciliteit] = !_faciliteitenStatus[faciliteit];
@@ -68,5 +70,25 @@ namespace VakantieVerblijven.Presentation.Windows
             }
         }
 
+        private void ParkenLijst_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ParkenLijst.SelectedItem == null)  //Geen park geselecteerd
+            {
+                volgendeKnop.IsEnabled = false;
+            }
+            else // een park geselcteerd
+            {
+                volgendeKnop.IsEnabled = true;
+            }
+        }
+
+        private void volgendeKnopClicked(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                NavigationButtonClicked?.Invoke(this, button.Tag as string);
+                ParkSelected?.Invoke(this, ParkenLijst.SelectedItem as ParkVO);
+            }
+        }
     }
 }

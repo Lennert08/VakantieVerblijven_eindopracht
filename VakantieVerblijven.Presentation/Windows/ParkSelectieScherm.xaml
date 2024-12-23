@@ -16,7 +16,7 @@
         <StackPanel Background="MidnightBlue" Orientation="Horizontal">
             <Button Content="Home" Foreground="White" Width="100" BorderThickness="0"  FontSize="15" Click="NavigateToNextWindow" Tag="Home"/>
             <Button Content="Reservaties"  Width="100" BorderThickness="0"  FontSize="15" Click="NavigateToNextWindow" Tag="Reservatie" />
-            <Button Content="Huizen" Width="100" BorderThickness="0"  FontSize="15" Tag="Huizen" Click="NavigateToNextWindow" />
+            <Button Content="Huizen" Width="100" BorderThickness="0"  FontSize="15" Tag="Huizen" Click="NavigateToNextWindow"/>
         </StackPanel>
 
 
@@ -32,9 +32,10 @@
                 <RowDefinition Height="88*"/>
             </Grid.RowDefinitions>
             
-            <!-- Titel-->
+            <!-- Titel + "volgende" button-->
 
             <TextBlock Text="Selecteer een park" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" Grid.ColumnSpan="20" VerticalAlignment="Center"/>
+            <Button Name="volgendeKnop" Tag="ReservatieAanmaak" Click="volgendeKnopClicked" Content="Volgende" HorizontalAlignment="Right" Grid.Column="1" VerticalAlignment="Center" Margin="0,0,20,0" Width="90" Height="25" IsEnabled="False"/>
 
             <!-- Tussentitels-->
             <TextBlock Text="Sorteer op faciliteiten" FontWeight="Bold" FontSize="15" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -64,7 +65,7 @@
 
             <!-- Parkenlijst -->
             <Border BorderBrush="Black" BorderThickness="2" CornerRadius="5" Margin="10" Grid.Column="1" Grid.Row="2">
-                <ListBox Name="ParkenLijst" Grid.Column="1" Grid.Row="2" FontSize="23" BorderThickness="0"/>
+                <ListBox Name="ParkenLijst" Grid.Column="1" Grid.Row="2" FontSize="23" BorderThickness="0" SelectionChanged="ParkenLijst_SelectionChanged"/>
             </Border>
         </Grid>
     </Grid>

@@ -8,7 +8,13 @@
     <Compile Update="Windows\HuizenOverzichtWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\KlantSelectieScherm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\ParkSelectieScherm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\ReservatieAanmaakWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Windows\ReservatiesWindow.xaml.cs">
@@ -25,7 +31,13 @@
     <Page Update="Windows\HuizenOverzichtWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Windows\KlantSelectieScherm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Windows\ParkSelectieScherm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\ReservatieAanmaakWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\ReservatiesWindow.xaml">

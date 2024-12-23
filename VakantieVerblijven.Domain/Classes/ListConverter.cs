@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VakantieVerblijven.Domain.Model;
+using VakantieVerblijven.Domain.ValueObject;
 
 namespace VakantieVerblijven.Domain.Classes
 {
     public static class ListConverter
     {
-        public static List<Faciliteit> ConvertFaciliteitDictionaryToList(Dictionary<Faciliteit, bool> faciliteitenStatus)
+        public static List<FaciliteitVO> ConvertFaciliteitDictionaryToList(Dictionary<FaciliteitVO, bool> faciliteitenStatus)
         {
-            List<Faciliteit> result = new List<Faciliteit>(); // Correct type gebruikt
-            foreach (KeyValuePair<Faciliteit, bool> kvp in faciliteitenStatus)
+            List<FaciliteitVO> result = new List<FaciliteitVO>(); // Correct type gebruikt
+            foreach (KeyValuePair<FaciliteitVO, bool> kvp in faciliteitenStatus)
             {
                 if (kvp.Value) // Check of de waarde true is
                 {

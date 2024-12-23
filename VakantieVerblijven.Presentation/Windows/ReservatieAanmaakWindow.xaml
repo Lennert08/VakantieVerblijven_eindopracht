@@ -1,0 +1,74 @@
+﻿<Window x:Class="VakantieVerblijven.Presentation.Windows.ReservatieAanmaakWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VakantieVerblijven.Presentation.Windows"
+        mc:Ignorable="d"
+        Title="ReservatieAanmaakWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="90*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Navigatiebar -->
+        <StackPanel Background="MidnightBlue" Orientation="Horizontal">
+            <Button Content="Home" Width="100" BorderThickness="0" FontSize="15" Click="NavigateToNextWindow" Tag="Home"/>
+            <Button Content="Reservaties"  Foreground="White" Width="100" BorderThickness="0" FontSize="15" Click="NavigateToNextWindow" Tag="Reservatie"/>
+            <Button Content="Huizen" Width="100" BorderThickness="0" FontSize="15" Click="NavigateToNextWindow" Tag="Huizen"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="11*"/>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="74*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Titel -->
+            <TextBlock Text="Reservatie aanmaken" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="22" FontWeight="Bold"/>
+
+            <Separator BorderThickness="5" VerticalAlignment="Bottom" BorderBrush="Gray" />
+            <!-- SorteerRuimte -->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="25*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Aantal personen" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Margin="15,0,0,0" FontFamily="Verdana"/>
+                <TextBlock Text="Van" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" Margin="15,0,0,0" FontFamily="Verdana"/>
+                <TextBlock Text="Tot" VerticalAlignment="Center" Grid.Column="2" Grid.Row="0" Margin="15,0,0,0" FontFamily="Verdana"/>
+
+                <ComboBox Grid.Column="0" Grid.Row="1" Margin="15,5,15,10" >
+                    <ComboBoxItem Content="1 persoon" />
+                    <ComboBoxItem Content="Optie 2" />
+                    <ComboBoxItem Content="Optie 3" />
+                    <ComboBoxItem Content="Optie 4" />
+                    <ComboBoxItem Content="Optie 5" />
+                    <ComboBoxItem Content="Optie 6" />
+                    <ComboBoxItem Content="Optie 7" />
+                    <ComboBoxItem Content="Optie 8" />
+                </ComboBox>
+                <DatePicker Margin="15,5,15,10" Grid.Column="1" Grid.Row="1" FontFamily="Verdana"/>
+                <DatePicker Margin="15,5,15,10" Grid.Column="2" Grid.Row="1" FontFamily="Verdana"/>
+                <Button Content="Zoek" Grid.Column="3"  Margin="15,5,15,10" Grid.Row="1" FontWeight="Bold"/>
+                <Button Content="Reservatie aanmaken" Grid.Column="4"  Margin="15,5,15,10" Grid.Row="1" FontWeight="Bold" FontSize="9"/>
+            </Grid>
+
+            <!-- Lijst met Huizen -->
+
+            <ListBox Name="HuisLijst" Grid.Row="2"/>
+
+        </Grid>
+    </Grid>
+</Window>

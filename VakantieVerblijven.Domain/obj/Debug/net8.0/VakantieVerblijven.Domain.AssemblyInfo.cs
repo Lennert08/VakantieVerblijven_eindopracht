@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VakantieVerblijven.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+edd82f386d25cea2c45fa4453a2eb37a8bbc9b87")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35e79ee999440666146c0efa91722e27c981196c")]
 [assembly: System.Reflection.AssemblyProductAttribute("VakantieVerblijven.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VakantieVerblijven.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

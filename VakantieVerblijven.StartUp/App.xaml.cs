@@ -19,8 +19,9 @@ namespace VakantieVerblijven.StartUp
             HuisMapper huisMapper = new HuisMapper();
             FaciliteitMapper faciliteitMapper = new FaciliteitMapper();
             ParkMapper parkMapper = new ParkMapper();
+            KlantMapper klantMapper = new KlantMapper();
 
-            DomainManager domainManager = new DomainManager(reservatieMapper, huisMapper, faciliteitMapper, parkMapper);
+            DomainManager domainManager = new DomainManager(reservatieMapper, huisMapper, faciliteitMapper, parkMapper, klantMapper);
             VakantieVerblijvenApplication vakantieVerblijvenApplication = new VakantieVerblijvenApplication(domainManager); 
         }
     }

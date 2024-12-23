@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VakantieVerblijven.Domain.Model;
 using VakantieVerblijven.Domain.Repositories;
+using VakantieVerblijven.Domain.ValueObject;
 
 namespace VakantieVerblijven.Persistence.Mappers
 {
@@ -51,7 +52,7 @@ namespace VakantieVerblijven.Persistence.Mappers
         }
 
 
-        public List<Park> GetParksByFacilities(List<Faciliteit> faciliteiten)
+        public List<Park> GetParksByFacilities(List<FaciliteitVO> faciliteiten)
         {
             List<Park> result = new List<Park>();
 

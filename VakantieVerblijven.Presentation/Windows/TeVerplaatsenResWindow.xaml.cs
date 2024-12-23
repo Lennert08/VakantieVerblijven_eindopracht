@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using VakantieVerblijven.Domain.Model;
+using VakantieVerblijven.Domain.ValueObject;
 
 namespace VakantieVerblijven.Presentation.Windows
 {
@@ -21,7 +22,7 @@ namespace VakantieVerblijven.Presentation.Windows
     public partial class TeVerplaatsenResWindow : Window
     {
         public event EventHandler<string> NavigationButtonClicked;
-        public TeVerplaatsenResWindow(List<Reservatie> probleemReservaties)
+        public TeVerplaatsenResWindow(List<ReservatieVO> probleemReservaties)
         {
             InitializeComponent();
             ReservatieLijst.ItemsSource = probleemReservaties;

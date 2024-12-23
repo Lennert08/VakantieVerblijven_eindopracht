@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VakantieVerblijven.Domain.Classes;
 using VakantieVerblijven.Domain.Model;
 using VakantieVerblijven.Domain.Repositories;
+using VakantieVerblijven.Domain.ValueObject;
 
 namespace VakantieVerblijven.Domain
 {
@@ -14,40 +16,50 @@ namespace VakantieVerblijven.Domain
         private IHuisRepository _huisRepository;
         private IFaciliteitRepository _faciliteitRepository;
         private IParkRepository _parkRepository;
+        private IKlantRepository _klantRepository;
 
-        public DomainManager(IReservatieRepository reservatieRepository, IHuisRepository huisRepository, IFaciliteitRepository faciliteitRepository, IParkRepository parkRepository)
+        public DomainManager(IReservatieRepository reservatieRepository, IHuisRepository huisRepository, IFaciliteitRepository faciliteitRepository, IParkRepository parkRepository, IKlantRepository klantRepository)
         {
             _reservatieRepository = reservatieRepository;
             _huisRepository = huisRepository;
             _faciliteitRepository = faciliteitRepository;
             _parkRepository = parkRepository;
+            _klantRepository = klantRepository;
         }
 
-        public List<Reservatie> GetReservatiesByMonth(DateTime date)
+        //reservaties
+        public List<ReservatieVO> GetReservatiesByMonth(DateTime date)
         {
-            return _reservatieRepository.GetReservatiesByMonth(date);
-        }
-        public List<Huis> GetAllHuizen()
-        {
-            return _huisRepository.GetAllHuizen();
+            return ValueObjectConverter.ConvertReservatieToValueObject(_reservatieRepository.GetReservatiesByMonth(date));
         }
 
-        public List<Reservatie> GetProbleemReservaties()
+        public List<ReservatieVO> GetProbleemReservaties()
         {
-            return _reservatieRepository.GetProbleemReservaties();
+            return ValueObjectConverter.ConvertReservatieToValueObject(_reservatieRepository.GetProbleemReservaties());
         }
-
-        public List<Faciliteit> GetAlleFaciliteiten()
+        //huizen
+        public List<HuisVO> GetAllHuizen()
         {
-            return _faciliteitRepository.GetAlleFaciliteiten();
+           return ValueObjectConverter.ConvertHuisToValueObject(_huisRepository.GetAllHuizen());
         }
-        public List<Park> GetAllParken()
+        //faciliteiten
+        public List<FaciliteitVO> GetAlleFaciliteiten()
         {
-            return _parkRepository.GetAllParks();
+           return ValueObjectConverter.ConvertFaciliteitToValueObject(_faciliteitRepository.GetAlleFaciliteiten());
         }
-        public List<Park> GetParkenByFaciliteiten(List<Faciliteit> faciliteiten)
+        //parken
+        public List<ParkVO> GetAllParken()
         {
-            return _parkRepository.GetParksByFacilities(faciliteiten);
+           return ValueObjectConverter.ConvertParkToValueObject(_parkRepository.GetAllParks());
+        }
+        public List<ParkVO> GetParkenByFaciliteiten(List<FaciliteitVO> faciliteiten)
+        {
+            return ValueObjectConverter.ConvertParkToValueObject(_parkRepository.GetParksByFacilities(faciliteiten));
+        }
+        //klanten
+        public List<KlantVO> ZoekKlant(string zoekterm)
+        {
+            return ValueObjectConverter.ConvertKlantToValueObject(_klantRepository.ZoekKlant(zoekterm));
         }
     }
 }

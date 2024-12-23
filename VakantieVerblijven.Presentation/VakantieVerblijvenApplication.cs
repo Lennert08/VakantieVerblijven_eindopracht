@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.ConstrainedExecution;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows;
 using VakantieVerblijven.Domain;
 using VakantieVerblijven.Domain.Classes;
-using VakantieVerblijven.Domain.Model;
+using VakantieVerblijven.Domain.ValueObject;
 using VakantieVerblijven.Presentation.Windows;
 
 namespace VakantieVerblijven.Presentation
@@ -18,21 +11,30 @@ namespace VakantieVerblijven.Presentation
         #region Fields + constructor
         private DomainManager _domainManager;
 
+        //fields
+        private KlantVO _gekozenKlantVoorReservatieAanmaak; //leegmaken na reservatie aanmaak
+        private ParkVO _gekozenParkVoorReservatieAanmaak; //leegmaken na reservatie aanmaak
+
         //windows
         private HomeWindow _homeWindow;
         private ReservatiesWindow _reservatiesWindow;
         private HuizenOverzichtWindow _huizenOverzichtWindow;
         private TeVerplaatsenResWindow _teVerplaatsenResWindow;
         private ParkSelectieScherm _parkSelectieScherm;
+        private KlantSelectieScherm _klantSelectieScherm;
+        private ReservatieAanmaakWindow _reservatieAanmaakWindow;
 
         public VakantieVerblijvenApplication(DomainManager domainManager)
         {
             _domainManager = domainManager;
+
             _reservatiesWindow = new ReservatiesWindow(_domainManager.GetReservatiesByMonth(DateTime.Today)); //haalt alle reseravties van de huidige maand op 
             _homeWindow = new HomeWindow();
             _huizenOverzichtWindow = new HuizenOverzichtWindow(_domainManager.GetAllHuizen());
             _teVerplaatsenResWindow = new TeVerplaatsenResWindow(_domainManager.GetProbleemReservaties());
             _parkSelectieScherm = new ParkSelectieScherm(_domainManager.GetAlleFaciliteiten(),_domainManager.GetAllParken());
+            _klantSelectieScherm = new KlantSelectieScherm();
+            _reservatieAanmaakWindow = new ReservatieAanmaakWindow();
 
             //linken van Window Navigators
             _homeWindow.NavigationButtonClicked += NavigateToNextWindow;
@@ -40,12 +42,22 @@ namespace VakantieVerblijven.Presentation
             _reservatiesWindow.NavigationButtonClicked += NavigateToNextWindow;
             _teVerplaatsenResWindow.NavigationButtonClicked += NavigateToNextWindow;
             _parkSelectieScherm.NavigationButtonClicked += NavigateToNextWindow;
+            _klantSelectieScherm.NavigationButtonClicked += NavigateToNextWindow;
+            _reservatieAanmaakWindow.NavigationButtonClicked += NavigateToNextWindow;
 
             //linken van alle andere events
             _huizenOverzichtWindow.HuisSelected += UpdateOnderhoudButton;
             _parkSelectieScherm.CheckboxChecked += UpdateParkLijst;
+            _klantSelectieScherm.ZoekButtonClicked += ZoekKlantOpInDatabase;
+            _klantSelectieScherm.KlantGekozen += GekozenKlantOpslagen;
+            _parkSelectieScherm.ParkSelected += GekozenParkOpslaan;
 
             _homeWindow.Show();
+        }
+
+        private void GekozenParkOpslaan(object? sender, ParkVO gekozenPark)
+        {
+            _gekozenParkVoorReservatieAanmaak = gekozenPark;
         }
 
         #endregion
@@ -72,6 +84,12 @@ namespace VakantieVerblijven.Presentation
                     case "ParkSelectie":
                         SchermManager.NavigateToNextWindow(teSluitenWindow, _parkSelectieScherm);
                         break;
+                    case "KlantSelectie":
+                        SchermManager.NavigateToNextWindow(teSluitenWindow, _klantSelectieScherm);
+                        break;
+                    case "ReservatieAanmaak":
+                        SchermManager.NavigateToNextWindow(teSluitenWindow, _reservatieAanmaakWindow);
+                        break;
                 }
             }
         }
@@ -79,7 +97,7 @@ namespace VakantieVerblijven.Presentation
         #endregion
 
         #region HuizenOverzichtWindow
-        public void UpdateOnderhoudButton(object? sender, Huis huis)
+        public void UpdateOnderhoudButton(object? sender, HuisVO huis)
         {
             if (huis.Actief)
             {
@@ -121,7 +139,7 @@ namespace VakantieVerblijven.Presentation
                     _parkSelectieScherm.ParkenLijst.ItemsSource = null; //lijst leegmaken want er is niks geselecteerd
                 } else
                 {
-                    List<Faciliteit> gekozenFaciliteiten = ListConverter.ConvertFaciliteitDictionaryToList(_parkSelectieScherm._faciliteitenStatus);
+                    List<FaciliteitVO> gekozenFaciliteiten = ListConverter.ConvertFaciliteitDictionaryToList(_parkSelectieScherm._faciliteitenStatus);
                     _parkSelectieScherm.ParkenLijst.ItemsSource = _domainManager.GetParkenByFaciliteiten(gekozenFaciliteiten);
                 }
 
@@ -129,6 +147,30 @@ namespace VakantieVerblijven.Presentation
         }
         #endregion
 
+        #region KlantSelectieScherm
+        private void ZoekKlantOpInDatabase(object? sender, string zoekTerm)
+        {
+            List<KlantVO> gevondenKlanten = _domainManager.ZoekKlant(zoekTerm);
 
+            if (gevondenKlanten.Count == 0)
+            {
+                MessageBox.Show("Geen klanten gevonden", "Informatie", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                _klantSelectieScherm.klantListBox.ItemsSource = gevondenKlanten;
+            }
+        }
+
+        private void GekozenKlantOpslagen(object? sender, KlantVO gekozenKlant)
+        {
+            _gekozenKlantVoorReservatieAanmaak = gekozenKlant;
+        }
+
+        #endregion
+
+        #region ReservatieAanmaakWindow
+
+        #endregion
     }
 }

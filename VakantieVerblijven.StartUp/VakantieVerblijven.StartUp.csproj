@@ -14,4 +14,16 @@
     <ProjectReference Include="..\VakantieVerblijven.Presentation\VakantieVerblijven.Presentation.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="ReservatiesWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="ReservatiesWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
 </Project>
