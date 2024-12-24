@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VakantieVerblijven.Domain.Model;
 using VakantieVerblijven.Domain.Repositories;
+using VakantieVerblijven.Domain.ValueObject;
 
 namespace VakantieVerblijven.Persistence.Mappers
 {
@@ -181,6 +182,66 @@ namespace VakantieVerblijven.Persistence.Mappers
             return reservaties;
         }
 
+        public bool VoegReservatieToe(KlantVO gekozenKlant, ParkVO gekozenPark, int aantalPersonen, DateTime startDatum, DateTime eindDatum, HuisVO gekozenHuis)
+        {
+            string insertReservatieQuery = @"
+            INSERT INTO Reservaties (klant_nummer, startdatum, einddatum)
+            OUTPUT INSERTED.Id 
+            VALUES (@KlantNummer, @StartDatum, @EindDatum);";
+            //output zorgt ervoor dat we deze id die gegeneert zal worden in reservaties kunnen opvragen zodat we deze in huis_reservaties kunnen stoppen
+
+            string insertHuisReservatieQuery = @"
+            INSERT INTO Huis_Reservaties (huis_id, reservatie_id)
+            VALUES (@HuisId, @ReservatieId);";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(DbInfo.ConnectionString))
+                {
+                    connection.Open();
+                    using (SqlTransaction transaction = connection.BeginTransaction())
+                    {
+                        try
+                        {
+                            int nieuweReservatieId;
+
+                            // Voeg de reservatie toe en haal het gegenereerde ID op
+                            using (SqlCommand reservatieCommand = new SqlCommand(insertReservatieQuery, connection, transaction))
+                            {
+                                reservatieCommand.Parameters.AddWithValue("@KlantNummer", gekozenKlant.Id);
+                                reservatieCommand.Parameters.AddWithValue("@StartDatum", startDatum);
+                                reservatieCommand.Parameters.AddWithValue("@EindDatum", eindDatum);
+
+                                nieuweReservatieId = (int)reservatieCommand.ExecuteScalar(); //hier krijgen we de id die gegeneert is mee en gebruiken we die in onze volgende insert
+                            }
+
+                            // Voeg de relatie tussen huis en reservatie toe in de tussentabel
+                            using (SqlCommand huisReservatieCommand = new SqlCommand(insertHuisReservatieQuery, connection, transaction))
+                            {
+                                huisReservatieCommand.Parameters.AddWithValue("@HuisId", gekozenHuis.Id);
+                                huisReservatieCommand.Parameters.AddWithValue("@ReservatieId", nieuweReservatieId);
+
+                                huisReservatieCommand.ExecuteNonQuery();
+                            }
+
+                            // Bevestig de transactie
+                            transaction.Commit();
+                            return true;
+                        }
+                        catch
+                        {
+                            // Rol de transactie terug bij een fout
+                            transaction.Rollback();
+                            throw;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Fout bij het toevoegen van de reservering: {ex.Message}");
+            }
+        }
 
     }
 }

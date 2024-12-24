@@ -63,14 +63,16 @@
 
             <!-- Lijst met reservaties -->
 
-            <DataGrid ItemsSource="{Binding Reservaties}" Grid.Row="1" Name="ReservatieLijst" ColumnWidth="150">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Van" Binding="{Binding FormattedStartDatum}"/>
-                    <DataGridTextColumn Header="Tot" Binding="{Binding FormattedEindDatum}"/>
-                    <DataGridTextColumn Header="Klant" Binding="{Binding Klant.Naam}"/>
-                    <DataGridTextColumn Header="Huis" Binding="{Binding Huis.VolledigAdres}"/>
-                </DataGrid.Columns>
-            </DataGrid>
+            <Border BorderBrush="LightGray" BorderThickness="2" CornerRadius="5" Margin="13" Grid.Column="1" Grid.Row="2">
+                <DataGrid ItemsSource="{Binding Reservaties}" Grid.Row="1" Name="ReservatieLijst" ColumnWidth="150">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Van" Binding="{Binding FormattedStartDatum}"/>
+                        <DataGridTextColumn Header="Tot" Binding="{Binding FormattedEindDatum}"/>
+                        <DataGridTextColumn Header="Klant" Binding="{Binding Klant.Naam}"/>
+                        <DataGridTextColumn Header="Huis" Binding="{Binding Huis.VolledigAdres}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Border>
 
         </Grid>
     </Grid>

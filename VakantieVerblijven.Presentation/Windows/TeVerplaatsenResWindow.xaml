@@ -27,17 +27,19 @@
                 <RowDefinition Height="90*"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="Te Behandelen Reservaties" FontSize="20" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Center" Margin="5" FontFamily="Verdana" HorizontalAlignment="Center"/>
+            <TextBlock Text="Te Behandelen Reservaties" FontSize="23" FontWeight="Bold" Grid.Row="0" VerticalAlignment="Bottom" Margin="5" FontFamily="Verdana" HorizontalAlignment="Center"/>
 
-            <DataGrid ItemsSource="{Binding Reservaties}" Grid.Row="1" Name="ReservatieLijst" ColumnWidth="150">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Van" Binding="{Binding FormattedStartDatum}"/>
-                    <DataGridTextColumn Header="Tot" Binding="{Binding FormattedEindDatum}"/>
-                    <DataGridTextColumn Header="Klant" Binding="{Binding Klant.Naam}"/>
-                    <DataGridTextColumn Header="Huis" Binding="{Binding Huis.VolledigAdres}"/>
-                    <DataGridTextColumn Header="Status" Binding="{Binding Huis.OnderhoudStatus}"/>
-                </DataGrid.Columns>
-            </DataGrid>
+            <Border BorderBrush="LightGray" BorderThickness="2" CornerRadius="5" Margin="13,6,13,13" Grid.Column="1" Grid.Row="2">
+                <DataGrid ItemsSource="{Binding Reservaties}" Grid.Row="1" Name="ReservatieLijst" ColumnWidth="150" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Van" Binding="{Binding FormattedStartDatum}"/>
+                        <DataGridTextColumn Header="Tot" Binding="{Binding FormattedEindDatum}"/>
+                        <DataGridTextColumn Header="Klant" Binding="{Binding Klant.Naam}"/>
+                        <DataGridTextColumn Header="Huis" Binding="{Binding Huis.VolledigAdres}"/>
+                        <DataGridTextColumn Header="Status" Binding="{Binding Huis.OnderhoudStatus}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Border>
         </Grid>
     
     </Grid>

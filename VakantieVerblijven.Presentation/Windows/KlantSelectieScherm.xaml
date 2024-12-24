@@ -45,7 +45,9 @@
 
 
             <!-- KlantenLijst -->
-            <ListBox Name="klantListBox" Grid.Row="2" FontSize="20" Margin="5" SelectionChanged="klantListBox_SelectionChanged"/>
+            <Border BorderBrush="Black" BorderThickness="2" CornerRadius="5" Margin="20" Grid.Column="1" Grid.Row="2">
+                <ListBox Name="klantListBox" Grid.Row="2" FontSize="20" Margin="0" SelectionChanged="klantListBox_SelectionChanged"/>
+            </Border>
         </Grid>
 
     </Grid>

@@ -1,0 +1,72 @@
+﻿<Window x:Class="VakantieVerblijven.Presentation.Windows.ReservatieAanmaakOverzicht"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VakantieVerblijven.Presentation.Windows"
+        mc:Ignorable="d"
+        Title="ReservatieAanmaakOverzicht" Height="450" Width="800" MinHeight="430" MinWidth="680">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="90*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Navigatiebar -->
+        <StackPanel Background="MidnightBlue" Orientation="Horizontal">
+            <Button Content="Home" Foreground="White" Width="100" BorderThickness="0"  FontSize="15" Tag="Home" Click="NavigateToNextWindow"/>
+            <Button Content="Reservaties"  Width="100" BorderThickness="0"  FontSize="15" Click="NavigateToNextWindow" Tag="Reservatie" />
+            <Button Content="Huizen" Width="100" BorderThickness="0"  FontSize="15" Tag="Huizen" Click="NavigateToNextWindow" />
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            
+            
+
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="2"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Titel -->
+            <TextBlock Text="Reservatie Overzicht" HorizontalAlignment="Center" Margin="15" FontWeight="Bold" FontSize="25" Grid.ColumnSpan="3"/>
+            <Separator BorderThickness="5" VerticalAlignment="Bottom" BorderBrush="Gray" Grid.ColumnSpan="3"/>
+
+            <!-- Lijnen tussen info en titel-->
+            <Grid Background="LightGray" Grid.Column="1" Grid.Row="1" Grid.RowSpan="5"/>
+            <Separator BorderThickness="2" VerticalAlignment="Bottom" BorderBrush="Gray" Grid.Row="1" Grid.ColumnSpan="3"/>
+            <Separator BorderThickness="2" VerticalAlignment="Bottom" BorderBrush="Gray" Grid.Row="2" Grid.ColumnSpan="3"/>
+            <Separator BorderThickness="2" VerticalAlignment="Bottom" BorderBrush="Gray" Grid.Row="3" Grid.ColumnSpan="3"/>
+            <Separator BorderThickness="2" VerticalAlignment="Bottom" BorderBrush="Gray" Grid.Row="4" Grid.ColumnSpan="3"/>
+            <Separator BorderThickness="2" VerticalAlignment="Bottom" BorderBrush="Gray" Grid.Row="5" Grid.ColumnSpan="3"/>
+
+            <!-- Overzicht titels-->
+            <TextBlock Text="Klant:" Grid.Row="1" VerticalAlignment="Center" FontSize="23" Margin="10" FontWeight="Bold"/>
+            <TextBlock Text="Park:" Grid.Row="2" VerticalAlignment="Center" FontSize="23" Margin="10" FontWeight="Bold"/>
+            <TextBlock Text="Huis:" Grid.Row="3" VerticalAlignment="Center" FontSize="23" Margin="10" FontWeight="Bold"/>
+            <TextBlock Text="Personen:" Grid.Row="4" VerticalAlignment="Center" FontSize="23" Margin="10" FontWeight="Bold"/>
+            <TextBlock Text="Periode:" Grid.Row="5" VerticalAlignment="Center" FontSize="23" Margin="10" FontWeight="Bold"/>
+
+            <!-- Overzicht info-->
+            <TextBlock Text="Klant info" Name="klantInfoText" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" FontSize="23" Margin="10"/>
+            <TextBlock Text="Park info" Name="parkInfoText" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" FontSize="23" Margin="10"/>
+            <TextBlock Text="Huis info" Name="huisInfoText" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" FontSize="23" Margin="10"/>
+            <TextBlock Text="Aantal personen" Name="persoonInfoText" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center" FontSize="23" Margin="10"/>
+            <TextBlock Text="Periode info" Name="periodeInfoText" Grid.Row="5" Grid.Column="2" VerticalAlignment="Center" FontSize="23" Margin="10"/>
+
+            <!-- Vastleggen knop -->
+            <Button Grid.Row="6" Content="Reservatie vastleggen" Padding="15" Margin="10" Grid.ColumnSpan="3" Click="ReservatieVastleggen"/>
+        </Grid>
+    </Grid>
+</Window>

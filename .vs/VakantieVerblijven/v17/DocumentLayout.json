@@ -3,36 +3,28 @@
   "WorkspaceRootPath": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.presentation\\windows\\reservatieaanmaakwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|solutionrelative:vakantieverblijven.presentation\\windows\\reservatieaanmaakwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.presentation\\windows\\reservatieaanmaakwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|solutionrelative:vakantieverblijven.presentation\\windows\\reservatieaanmaakwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.presentation\\vakantieverblijvenapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|solutionrelative:vakantieverblijven.presentation\\vakantieverblijvenapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.presentation\\windows\\reservatieaanmaakoverzicht.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|solutionrelative:vakantieverblijven.presentation\\windows\\reservatieaanmaakoverzicht.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.presentation\\windows\\klantselectiescherm.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|solutionrelative:vakantieverblijven.presentation\\windows\\klantselectiescherm.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.presentation\\windows\\reservatieswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|solutionrelative:vakantieverblijven.presentation\\windows\\reservatieswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.presentation\\windows\\huizenoverzichtwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|solutionrelative:vakantieverblijven.presentation\\windows\\huizenoverzichtwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.presentation\\windows\\parkselectiescherm.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|solutionrelative:vakantieverblijven.presentation\\windows\\parkselectiescherm.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.presentation\\windows\\parkselectiescherm.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|solutionrelative:vakantieverblijven.presentation\\windows\\parkselectiescherm.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.presentation\\windows\\reservatieaanmaakwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|solutionrelative:vakantieverblijven.presentation\\windows\\reservatieaanmaakwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.presentation\\vakantieverblijvenapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|solutionrelative:vakantieverblijven.presentation\\vakantieverblijvenapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.presentation\\windows\\parkselectiescherm.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5AEC6A8F-6CBE-4D4B-BF00-2811D000C34A}|VakantieVerblijven.Presentation\\VakantieVerblijven.Presentation.csproj|solutionrelative:vakantieverblijven.presentation\\windows\\parkselectiescherm.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{400D3736-4DCA-4936-AFA1-E14ECC0919D9}|VakantieVerblijven.XUnitTests\\VakantieVerblijven.XUnitTests.csproj|c:\\non_ondrive_map\\vakken_sem3\\eindopdracht_gevorderd\\vakantieverblijven\\vakantieverblijven.xunittests\\reservatiedatumcheckertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{400D3736-4DCA-4936-AFA1-E14ECC0919D9}|VakantieVerblijven.XUnitTests\\VakantieVerblijven.XUnitTests.csproj|solutionrelative:vakantieverblijven.xunittests\\reservatiedatumcheckertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,101 +42,79 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ReservatiesWindow.xaml",
-              "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\ReservatiesWindow.xaml",
-              "RelativeDocumentMoniker": "VakantieVerblijven.Presentation\\Windows\\ReservatiesWindow.xaml",
-              "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\ReservatiesWindow.xaml",
-              "RelativeToolTip": "VakantieVerblijven.Presentation\\Windows\\ReservatiesWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-23T04:20:24.553Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ReservatieAanmaakWindow.xaml",
-              "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\ReservatieAanmaakWindow.xaml",
-              "RelativeDocumentMoniker": "VakantieVerblijven.Presentation\\Windows\\ReservatieAanmaakWindow.xaml",
-              "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\ReservatieAanmaakWindow.xaml",
-              "RelativeToolTip": "VakantieVerblijven.Presentation\\Windows\\ReservatieAanmaakWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-23T04:20:23.377Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "KlantSelectieScherm.xaml",
-              "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\KlantSelectieScherm.xaml",
-              "RelativeDocumentMoniker": "VakantieVerblijven.Presentation\\Windows\\KlantSelectieScherm.xaml",
-              "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\KlantSelectieScherm.xaml",
-              "RelativeToolTip": "VakantieVerblijven.Presentation\\Windows\\KlantSelectieScherm.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-23T04:38:25.197Z",
+              "Title": "ReservatieAanmaakWindow.xaml.cs",
+              "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\ReservatieAanmaakWindow.xaml.cs",
+              "RelativeDocumentMoniker": "VakantieVerblijven.Presentation\\Windows\\ReservatieAanmaakWindow.xaml.cs",
+              "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\ReservatieAanmaakWindow.xaml.cs",
+              "RelativeToolTip": "VakantieVerblijven.Presentation\\Windows\\ReservatieAanmaakWindow.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T06:32:35.117Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "VakantieVerblijvenApplication.cs",
-              "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\VakantieVerblijvenApplication.cs",
-              "RelativeDocumentMoniker": "VakantieVerblijven.Presentation\\VakantieVerblijvenApplication.cs",
-              "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\VakantieVerblijvenApplication.cs",
-              "RelativeToolTip": "VakantieVerblijven.Presentation\\VakantieVerblijvenApplication.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAQwKwAAAAAAAAAAAAAAA==",
+              "Title": "ReservatieAanmaakOverzicht.xaml.cs",
+              "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\ReservatieAanmaakOverzicht.xaml.cs",
+              "RelativeDocumentMoniker": "VakantieVerblijven.Presentation\\Windows\\ReservatieAanmaakOverzicht.xaml.cs",
+              "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\ReservatieAanmaakOverzicht.xaml.cs",
+              "RelativeToolTip": "VakantieVerblijven.Presentation\\Windows\\ReservatieAanmaakOverzicht.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T04:27:49.971Z",
+              "WhenOpened": "2024-12-24T06:32:33.087Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HuizenOverzichtWindow.xaml",
-              "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\HuizenOverzichtWindow.xaml",
-              "RelativeDocumentMoniker": "VakantieVerblijven.Presentation\\Windows\\HuizenOverzichtWindow.xaml",
-              "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\HuizenOverzichtWindow.xaml",
-              "RelativeToolTip": "VakantieVerblijven.Presentation\\Windows\\HuizenOverzichtWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-23T04:40:00.88Z",
+              "DocumentIndex": 2,
+              "Title": "ParkSelectieScherm.xaml.cs",
+              "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\ParkSelectieScherm.xaml.cs",
+              "RelativeDocumentMoniker": "VakantieVerblijven.Presentation\\Windows\\ParkSelectieScherm.xaml.cs",
+              "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\ParkSelectieScherm.xaml.cs",
+              "RelativeToolTip": "VakantieVerblijven.Presentation\\Windows\\ParkSelectieScherm.xaml.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T06:32:28.092Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "ParkSelectieScherm.xaml",
               "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\ParkSelectieScherm.xaml",
               "RelativeDocumentMoniker": "VakantieVerblijven.Presentation\\Windows\\ParkSelectieScherm.xaml",
               "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\ParkSelectieScherm.xaml",
               "RelativeToolTip": "VakantieVerblijven.Presentation\\Windows\\ParkSelectieScherm.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-23T04:31:08.658Z",
+              "WhenOpened": "2024-12-24T06:32:25.767Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ParkSelectieScherm.xaml.cs",
-              "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\ParkSelectieScherm.xaml.cs",
-              "RelativeDocumentMoniker": "VakantieVerblijven.Presentation\\Windows\\ParkSelectieScherm.xaml.cs",
-              "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\ParkSelectieScherm.xaml.cs",
-              "RelativeToolTip": "VakantieVerblijven.Presentation\\Windows\\ParkSelectieScherm.xaml.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "ReservatieDatumCheckerTests.cs",
+              "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.XUnitTests\\ReservatieDatumCheckerTests.cs",
+              "RelativeDocumentMoniker": "VakantieVerblijven.XUnitTests\\ReservatieDatumCheckerTests.cs",
+              "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.XUnitTests\\ReservatieDatumCheckerTests.cs",
+              "RelativeToolTip": "VakantieVerblijven.XUnitTests\\ReservatieDatumCheckerTests.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T04:31:13.118Z",
+              "WhenOpened": "2024-12-24T06:31:31.515Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ReservatieAanmaakWindow.xaml.cs",
-              "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\ReservatieAanmaakWindow.xaml.cs",
-              "RelativeDocumentMoniker": "VakantieVerblijven.Presentation\\Windows\\ReservatieAanmaakWindow.xaml.cs",
-              "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\Windows\\ReservatieAanmaakWindow.xaml.cs",
-              "RelativeToolTip": "VakantieVerblijven.Presentation\\Windows\\ReservatieAanmaakWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "VakantieVerblijvenApplication.cs",
+              "DocumentMoniker": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\VakantieVerblijvenApplication.cs",
+              "RelativeDocumentMoniker": "VakantieVerblijven.Presentation\\VakantieVerblijvenApplication.cs",
+              "ToolTip": "C:\\non_ondrive_map\\Vakken_sem3\\Eindopdracht_gevorderd\\VakantieVerblijven\\VakantieVerblijven.Presentation\\VakantieVerblijvenApplication.cs",
+              "RelativeToolTip": "VakantieVerblijven.Presentation\\VakantieVerblijvenApplication.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T04:37:04.017Z",
+              "WhenOpened": "2024-12-24T06:31:29.875Z",
               "EditorCaption": ""
             }
           ]

@@ -28,14 +28,16 @@
 
             <Button Margin="180,7,180,7" Content="Voeg toe aan onderhoud" FontWeight="Bold" Name="OnderhoudButton" IsEnabled="False" />
 
-            <DataGrid Name="HuisDataGrid" Grid.Row="1" ColumnWidth="150" SelectionChanged="HuisDataGrid_SelectionChanged" >
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Adres" Binding="{Binding VolledigAdres}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Max personen" Binding="{Binding AantalPersonen}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Park" Binding="{Binding Park.Naam}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Status" Binding="{Binding OnderhoudStatus}" IsReadOnly="True"/>
-                </DataGrid.Columns>
-            </DataGrid>
+            <Border BorderBrush="LightGray" BorderThickness="2" CornerRadius="5" Margin="13" Grid.Column="1" Grid.Row="2">
+                <DataGrid Name="HuisDataGrid" Grid.Row="1" ColumnWidth="150" SelectionChanged="HuisDataGrid_SelectionChanged" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Adres" Binding="{Binding VolledigAdres}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Max personen" Binding="{Binding AantalPersonen}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Park" Binding="{Binding Park.Naam}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Status" Binding="{Binding OnderhoudStatus}" IsReadOnly="True"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Border>
         </Grid>
 
     </Grid>

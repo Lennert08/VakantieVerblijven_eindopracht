@@ -31,3 +31,5 @@ C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\Vakanti
 C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\Windows\KlantSelectieScherm.baml
 C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\Windows\ReservatieAanmaakWindow.g.cs
 C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\Windows\ReservatieAanmaakWindow.baml
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\Windows\ReservatieAanmaakOverzicht.g.cs
+C:\non_ondrive_map\Vakken_sem3\Eindopdracht_gevorderd\VakantieVerblijven\VakantieVerblijven.Presentation\obj\Debug\net8.0-windows\Windows\ReservatieAanmaakOverzicht.baml

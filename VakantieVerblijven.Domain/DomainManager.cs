@@ -40,17 +40,25 @@ namespace VakantieVerblijven.Domain
         //huizen
         public List<HuisVO> GetAllHuizen()
         {
-           return ValueObjectConverter.ConvertHuisToValueObject(_huisRepository.GetAllHuizen());
+            return ValueObjectConverter.ConvertHuisToValueObject(_huisRepository.GetAllHuizen());
+        }
+        public List<string> GetPersonenOpties()
+        {
+            return _huisRepository.GetPersonenOpties();
+        }
+        public List<HuisVO> GetBeschikbareHuizen(int parkId, int aantalPersonen, DateTime beginDatum, DateTime eindDatum)
+        {
+            return ValueObjectConverter.ConvertHuisToValueObject(_huisRepository.GetBeschikbareHuizen(parkId, aantalPersonen, beginDatum, eindDatum));
         }
         //faciliteiten
         public List<FaciliteitVO> GetAlleFaciliteiten()
         {
-           return ValueObjectConverter.ConvertFaciliteitToValueObject(_faciliteitRepository.GetAlleFaciliteiten());
+            return ValueObjectConverter.ConvertFaciliteitToValueObject(_faciliteitRepository.GetAlleFaciliteiten());
         }
         //parken
         public List<ParkVO> GetAllParken()
         {
-           return ValueObjectConverter.ConvertParkToValueObject(_parkRepository.GetAllParks());
+            return ValueObjectConverter.ConvertParkToValueObject(_parkRepository.GetAllParks());
         }
         public List<ParkVO> GetParkenByFaciliteiten(List<FaciliteitVO> faciliteiten)
         {
@@ -60,6 +68,11 @@ namespace VakantieVerblijven.Domain
         public List<KlantVO> ZoekKlant(string zoekterm)
         {
             return ValueObjectConverter.ConvertKlantToValueObject(_klantRepository.ZoekKlant(zoekterm));
+        }
+
+        public bool VoegReservatieToe(KlantVO gekozenKlant, ParkVO gekozenPark, int aantalPersonen, DateTime startDatum, DateTime eindDatum, HuisVO gekozenHuis)
+        {
+            return _reservatieRepository.VoegReservatieToe(gekozenKlant, gekozenPark, aantalPersonen, startDatum, eindDatum, gekozenHuis);
         }
     }
 }

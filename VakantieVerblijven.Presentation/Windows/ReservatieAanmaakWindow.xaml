@@ -27,9 +27,9 @@
             </Grid.RowDefinitions>
 
             <!-- Titel -->
-            <TextBlock Text="Reservatie aanmaken" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="22" FontWeight="Bold"/>
+            <TextBlock Text="Huis Reserveren" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="22" FontWeight="Bold"/>
 
-            <Separator BorderThickness="5" VerticalAlignment="Bottom" BorderBrush="Gray" />
+       
             <!-- SorteerRuimte -->
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
@@ -49,25 +49,19 @@
                 <TextBlock Text="Van" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" Margin="15,0,0,0" FontFamily="Verdana"/>
                 <TextBlock Text="Tot" VerticalAlignment="Center" Grid.Column="2" Grid.Row="0" Margin="15,0,0,0" FontFamily="Verdana"/>
 
-                <ComboBox Grid.Column="0" Grid.Row="1" Margin="15,5,15,10" >
-                    <ComboBoxItem Content="1 persoon" />
-                    <ComboBoxItem Content="Optie 2" />
-                    <ComboBoxItem Content="Optie 3" />
-                    <ComboBoxItem Content="Optie 4" />
-                    <ComboBoxItem Content="Optie 5" />
-                    <ComboBoxItem Content="Optie 6" />
-                    <ComboBoxItem Content="Optie 7" />
-                    <ComboBoxItem Content="Optie 8" />
-                </ComboBox>
-                <DatePicker Margin="15,5,15,10" Grid.Column="1" Grid.Row="1" FontFamily="Verdana"/>
-                <DatePicker Margin="15,5,15,10" Grid.Column="2" Grid.Row="1" FontFamily="Verdana"/>
-                <Button Content="Zoek" Grid.Column="3"  Margin="15,5,15,10" Grid.Row="1" FontWeight="Bold"/>
-                <Button Content="Reservatie aanmaken" Grid.Column="4"  Margin="15,5,15,10" Grid.Row="1" FontWeight="Bold" FontSize="9"/>
+                <!-- Max Personen Lijst -->
+                <ComboBox Name="PersonenComboBox"  Margin="15,5,15,10" Grid.Row="1"/>
+               
+                <DatePicker Margin="15,5,15,10" Grid.Column="1" Grid.Row="1" FontFamily="Verdana" Name="BeginDatumBox"/>
+                <DatePicker Margin="15,5,15,10" Grid.Column="2" Grid.Row="1" FontFamily="Verdana" Name="EindDatumBox"/>
+                <Button Content="Zoek" Grid.Column="3"  Margin="15,5,15,10" Grid.Row="1" FontWeight="Bold" Click="ZoekKnopClicked"/>
+                <Button Content="Volgende" Name="volgendeKnop" Grid.Column="4" Click="volgendeKnopClicked" Margin="15,5,15,10" Grid.Row="1" FontWeight="Bold" IsEnabled="False"/>
             </Grid>
 
             <!-- Lijst met Huizen -->
-
-            <ListBox Name="HuisLijst" Grid.Row="2"/>
+            <Border BorderBrush="Black" BorderThickness="2" CornerRadius="5" Margin="20" Grid.Column="1" Grid.Row="2">
+                <ListBox Name="HuisLijst" Grid.Row="2" SelectionChanged="HuisLijst_SelectionChanged" FontSize="20" Margin="0"/>
+            </Border>
 
         </Grid>
     </Grid>

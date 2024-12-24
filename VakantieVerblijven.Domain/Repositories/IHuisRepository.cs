@@ -10,5 +10,7 @@ namespace VakantieVerblijven.Domain.Repositories
     public interface IHuisRepository
     {
         List<Huis> GetAllHuizen();
+        List<Huis> GetBeschikbareHuizen(int parkId, int aantalPersonen, DateTime beginDatum, DateTime eindDatum);
+        List<string> GetPersonenOpties();
     }
 }

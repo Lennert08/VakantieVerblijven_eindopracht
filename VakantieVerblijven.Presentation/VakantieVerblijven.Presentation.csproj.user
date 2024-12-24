@@ -14,6 +14,9 @@
     <Compile Update="Windows\ParkSelectieScherm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\ReservatieAanmaakOverzicht.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\ReservatieAanmaakWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -35,6 +38,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\ParkSelectieScherm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\ReservatieAanmaakOverzicht.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\ReservatieAanmaakWindow.xaml">

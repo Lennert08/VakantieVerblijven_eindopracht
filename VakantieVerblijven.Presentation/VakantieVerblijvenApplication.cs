@@ -11,10 +11,13 @@ namespace VakantieVerblijven.Presentation
         #region Fields + constructor
         private DomainManager _domainManager;
 
-        //fields
-        private KlantVO _gekozenKlantVoorReservatieAanmaak; //leegmaken na reservatie aanmaak
-        private ParkVO _gekozenParkVoorReservatieAanmaak; //leegmaken na reservatie aanmaak
-
+        //fields voor het aanmaken van een reservatie
+        private KlantVO _gekozenKlant; //leegmaken na reservatie aanmaak
+        private ParkVO _gekozenPark; //leegmaken na reservatie aanmaak
+        private int _aantalPersonen; //leegmaken na reservatie aanmaak
+        private DateTime _startDatum; //leegmaken na reservatie aanmaak
+        private DateTime _eindDatum; //leegmaken na reservatie aanmaak
+        private HuisVO _gekozenHuis; //leegmaken na reservatie aanmaak
         //windows
         private HomeWindow _homeWindow;
         private ReservatiesWindow _reservatiesWindow;
@@ -23,6 +26,7 @@ namespace VakantieVerblijven.Presentation
         private ParkSelectieScherm _parkSelectieScherm;
         private KlantSelectieScherm _klantSelectieScherm;
         private ReservatieAanmaakWindow _reservatieAanmaakWindow;
+        private ReservatieAanmaakOverzicht _reservatieAanmaakOverzicht;
 
         public VakantieVerblijvenApplication(DomainManager domainManager)
         {
@@ -34,7 +38,7 @@ namespace VakantieVerblijven.Presentation
             _teVerplaatsenResWindow = new TeVerplaatsenResWindow(_domainManager.GetProbleemReservaties());
             _parkSelectieScherm = new ParkSelectieScherm(_domainManager.GetAlleFaciliteiten(),_domainManager.GetAllParken());
             _klantSelectieScherm = new KlantSelectieScherm();
-            _reservatieAanmaakWindow = new ReservatieAanmaakWindow();
+            _reservatieAanmaakWindow = new ReservatieAanmaakWindow(_domainManager.GetPersonenOpties());
 
             //linken van Window Navigators
             _homeWindow.NavigationButtonClicked += NavigateToNextWindow;
@@ -51,13 +55,10 @@ namespace VakantieVerblijven.Presentation
             _klantSelectieScherm.ZoekButtonClicked += ZoekKlantOpInDatabase;
             _klantSelectieScherm.KlantGekozen += GekozenKlantOpslagen;
             _parkSelectieScherm.ParkSelected += GekozenParkOpslaan;
+            _reservatieAanmaakWindow.ZoekKnopSelected += BeschikBareHuizenZoeken;
+            _reservatieAanmaakWindow.huisGekozen += GaNaarReservatieAanmaakOvericht;
 
             _homeWindow.Show();
-        }
-
-        private void GekozenParkOpslaan(object? sender, ParkVO gekozenPark)
-        {
-            _gekozenParkVoorReservatieAanmaak = gekozenPark;
         }
 
         #endregion
@@ -145,6 +146,11 @@ namespace VakantieVerblijven.Presentation
 
             }
         }
+
+        private void GekozenParkOpslaan(object? sender, ParkVO gekozenPark)
+        {
+            _gekozenPark = gekozenPark;
+        }
         #endregion
 
         #region KlantSelectieScherm
@@ -164,13 +170,92 @@ namespace VakantieVerblijven.Presentation
 
         private void GekozenKlantOpslagen(object? sender, KlantVO gekozenKlant)
         {
-            _gekozenKlantVoorReservatieAanmaak = gekozenKlant;
+            _gekozenKlant = gekozenKlant;
         }
 
         #endregion
 
         #region ReservatieAanmaakWindow
+        private void BeschikBareHuizenZoeken(object? sender, CustomEventArgs.ZoekKnopEventArgs e)
+        {
+            try
+            {
+                ReservatieDatumsChecker.ReservatieDatumsValidatie(e.StartDatum, e.EindDatum);
+                List<HuisVO> beschikbareHuizen = new List<HuisVO>();
+                beschikbareHuizen = _domainManager.GetBeschikbareHuizen(_gekozenPark.Id, e.AantalPersonen, e.StartDatum, e.EindDatum);
+
+                _aantalPersonen = e.AantalPersonen;
+                _startDatum = e.StartDatum;
+                _eindDatum = e.EindDatum;
+
+                _reservatieAanmaakWindow.HuisLijst.ItemsSource = beschikbareHuizen;
+            } catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void GaNaarReservatieAanmaakOvericht(object? sender, HuisVO gekozenHuis)
+        {
+            _gekozenHuis = gekozenHuis;
+            _reservatieAanmaakOverzicht = new ReservatieAanmaakOverzicht(_gekozenKlant, _gekozenPark, _aantalPersonen, _startDatum, _eindDatum, _gekozenHuis);
+            _reservatieAanmaakOverzicht.NavigationButtonClicked += NavigateToNextWindow;
+            _reservatieAanmaakOverzicht.ReservatieVastLegButtonClicked += ReservatieAanmaken;
+            SchermManager.NavigateToNextWindow(_reservatieAanmaakWindow, _reservatieAanmaakOverzicht);
+
+        }
 
         #endregion
+
+        #region ReservatieAanmaakOverzicht
+        private void ReservatieAanmaken(object? sender, EventArgs e)
+        {
+            try
+            {
+                bool reservatieToegevoegd =  _domainManager.VoegReservatieToe(_gekozenKlant, _gekozenPark, _aantalPersonen, _startDatum, _eindDatum, _gekozenHuis);
+                if (reservatieToegevoegd)
+                {
+                    MessageBox.Show("Reservatie toegevoegd", "Informatie", MessageBoxButton.OK, MessageBoxImage.Information);
+                    NavigateToNextWindow(_reservatieAanmaakOverzicht, "Home");
+
+                    // hier onder heel het aanmaakproces resetten
+                    _gekozenKlant = null;
+                    _gekozenPark = null;
+                    _aantalPersonen = 0;
+                    _startDatum = DateTime.MinValue;
+                    _eindDatum = DateTime.MinValue;
+                    _gekozenHuis = null;
+
+                    _klantSelectieScherm = new KlantSelectieScherm();
+                    _parkSelectieScherm = new ParkSelectieScherm(_domainManager.GetAlleFaciliteiten(), _domainManager.GetAllParken());
+                    _reservatieAanmaakWindow = new ReservatieAanmaakWindow(_domainManager.GetPersonenOpties());
+                    LinkEventsNaReservatieAanmaak();
+                }
+                else
+                {
+                    MessageBox.Show("Reservatie niet toegevoegd", "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Fout bij het toevoegen van de reservatie", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+        #endregion
+
+        public void LinkEventsNaReservatieAanmaak()
+        {
+            //navigatie
+            _parkSelectieScherm.NavigationButtonClicked += NavigateToNextWindow;
+            _klantSelectieScherm.NavigationButtonClicked += NavigateToNextWindow;
+            _reservatieAanmaakWindow.NavigationButtonClicked += NavigateToNextWindow;
+
+            //andere events
+            _parkSelectieScherm.CheckboxChecked += UpdateParkLijst;
+            _klantSelectieScherm.ZoekButtonClicked += ZoekKlantOpInDatabase;
+            _klantSelectieScherm.KlantGekozen += GekozenKlantOpslagen;
+            _parkSelectieScherm.ParkSelected += GekozenParkOpslaan;
+            _reservatieAanmaakWindow.ZoekKnopSelected += BeschikBareHuizenZoeken;
+            _reservatieAanmaakWindow.huisGekozen += GaNaarReservatieAanmaakOvericht;
+        }
     }
 }

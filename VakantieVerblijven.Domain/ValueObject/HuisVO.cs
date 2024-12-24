@@ -31,5 +31,10 @@ namespace VakantieVerblijven.Domain.ValueObject
         {
             Park = park;
         }
+
+        public override string ToString()
+        {
+            return $"{VolledigAdres} | Capaciteit: {AantalPersonen} personen";
+        }
     }
 }
