@@ -13,5 +13,7 @@ namespace VakantieVerblijven.Domain.Repositories
         List<Reservatie> GetProbleemReservaties();
         List<Reservatie> GetReservatiesByMonth(DateTime date);
         bool VoegReservatieToe(KlantVO gekozenKlant, ParkVO gekozenPark, int aantalPersonen, DateTime startDatum, DateTime eindDatum, HuisVO gekozenHuis);
+        List<Reservatie> ZoekReservaties(string klantZoekTerm, int parkId);
+        List<Reservatie> ZoekReservatiesMetPeriode(string klantZoekTerm, int parkId, DateTime? startDatum, DateTime? eindDatum);
     }
 }

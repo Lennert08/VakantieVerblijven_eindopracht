@@ -179,5 +179,61 @@ namespace VakantieVerblijven.Persistence.Mappers
 
             return beschikbareHuizen;
         }
+
+        public void ZetHuisInOnderhoud(int huisId)
+        {
+            string query = "UPDATE Huizen SET Actief = 0 WHERE Id = @HuisId";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(_connectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@HuisId", huisId);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+                        if (rowsAffected == 0)
+                        {
+                            throw new Exception("Het huis kon niet in onderhoud worden gezet. Controleer of het huis bestaat.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Fout bij het in onderhoud zetten van het huis: {ex.Message}");
+            }
+        }
+
+        public void HaalHuisUitOnderhoud(int huisId)
+        {
+            string query = "UPDATE Huizen SET Actief = 1 WHERE Id = @HuisId";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(_connectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@HuisId", huisId);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+                        if (rowsAffected == 0)
+                        {
+                            throw new Exception("Het huis kon niet uit onderhoud worden gehaald. Controleer of het huis bestaat.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Fout bij het uit onderhoud halen van het huis: {ex.Message}");
+            }
+        }
     }
 }

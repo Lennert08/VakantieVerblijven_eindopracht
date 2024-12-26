@@ -32,7 +32,7 @@ namespace VakantieVerblijven.Presentation
         {
             _domainManager = domainManager;
 
-            _reservatiesWindow = new ReservatiesWindow(_domainManager.GetReservatiesByMonth(DateTime.Today)); //haalt alle reseravties van de huidige maand op 
+            _reservatiesWindow = new ReservatiesWindow(_domainManager.GetReservatiesByMonth(DateTime.Today), _domainManager.GetAllParken()); //haalt alle reseravties van de huidige maand op 
             _homeWindow = new HomeWindow();
             _huizenOverzichtWindow = new HuizenOverzichtWindow(_domainManager.GetAllHuizen());
             _teVerplaatsenResWindow = new TeVerplaatsenResWindow(_domainManager.GetProbleemReservaties());
@@ -57,10 +57,11 @@ namespace VakantieVerblijven.Presentation
             _parkSelectieScherm.ParkSelected += GekozenParkOpslaan;
             _reservatieAanmaakWindow.ZoekKnopSelected += BeschikBareHuizenZoeken;
             _reservatieAanmaakWindow.huisGekozen += GaNaarReservatieAanmaakOvericht;
+            _huizenOverzichtWindow.OnderhoudButtonClicked += HuisOnderhoudStatusVeranderen;
+            _reservatiesWindow.ZoekButtonClicked += ReservatieOpzoeken;
 
             _homeWindow.Show();
         }
-
         #endregion
 
 
@@ -115,10 +116,44 @@ namespace VakantieVerblijven.Presentation
 
             }
         }
+        private void HuisOnderhoudStatusVeranderen(object? sender, HuisVO gekozenHuis)
+        {
+            if (gekozenHuis.Actief)
+            {
+                _domainManager.ZetHuisInOnderhoud(gekozenHuis.Id);
+            }
+            else
+            {
+                _domainManager.HaalHuisUitOnderhoud(gekozenHuis.Id);
+            }
+            _huizenOverzichtWindow.HuisDataGrid.ItemsSource = _domainManager.GetAllHuizen(); //updaten van de huislijst
+            _teVerplaatsenResWindow.ReservatieLijst.ItemsSource = _domainManager.GetProbleemReservaties(); //updaten van de reservatielijst
+            _reservatieAanmaakWindow.HuisLijst.ItemsSource = null; //lijst leegmaken zodat er geen reservatie gemaakt kan worden met een huis dat in onderhoud is
+        }
         #endregion
 
         #region ReservatiesWindow
+        private void ReservatieOpzoeken(object? sender, CustomEventArgs.ReservatieZoekKnopEventArgs e)
+        {
+            try
+            {
+                bool bijdeDatumsGeselecteerd = ReservatieDatumsChecker.ReservatieZoekenDatumsValidatie(e.StartDatum, e.EindDatum);
 
+                if (!bijdeDatumsGeselecteerd && e.ParkId == 0 && string.IsNullOrEmpty(e.KlantNaam)) // voor als er niet van zoekterm is ingegven
+                {
+                    throw new ArgumentException("Zorg ervoor dat minstens één zoekterm is ingevuld.");
+                } else if (bijdeDatumsGeselecteerd)
+                {
+                    _reservatiesWindow.ReservatieLijst.ItemsSource = _domainManager.ZoekReservatiesMetPeriode(e.KlantNaam,e.ParkId,e.StartDatum, e.EindDatum);
+                } else
+                {
+                    _reservatiesWindow.ReservatieLijst.ItemsSource = _domainManager.ZoekReservaties(e.KlantNaam, e.ParkId);
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Fout bij het zoeken van de reservaties", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
         #endregion
 
         #region TeVerplaatsenResWindow
@@ -240,7 +275,6 @@ namespace VakantieVerblijven.Presentation
                 MessageBox.Show(ex.Message, "Fout bij het toevoegen van de reservatie", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-        #endregion
 
         public void LinkEventsNaReservatieAanmaak()
         {
@@ -257,5 +291,7 @@ namespace VakantieVerblijven.Presentation
             _reservatieAanmaakWindow.ZoekKnopSelected += BeschikBareHuizenZoeken;
             _reservatieAanmaakWindow.huisGekozen += GaNaarReservatieAanmaakOvericht;
         }
+        #endregion
+
     }
 }

@@ -32,10 +32,21 @@ namespace VakantieVerblijven.Domain
         {
             return ValueObjectConverter.ConvertReservatieToValueObject(_reservatieRepository.GetReservatiesByMonth(date));
         }
-
+        public bool VoegReservatieToe(KlantVO gekozenKlant, ParkVO gekozenPark, int aantalPersonen, DateTime startDatum, DateTime eindDatum, HuisVO gekozenHuis)
+        {
+            return _reservatieRepository.VoegReservatieToe(gekozenKlant, gekozenPark, aantalPersonen, startDatum, eindDatum, gekozenHuis);
+        }
         public List<ReservatieVO> GetProbleemReservaties()
         {
             return ValueObjectConverter.ConvertReservatieToValueObject(_reservatieRepository.GetProbleemReservaties());
+        }
+        public List<ReservatieVO> ZoekReservaties(string klantZoekTerm, int parkId)
+        {
+            return ValueObjectConverter.ConvertReservatieToValueObject(_reservatieRepository.ZoekReservaties(klantZoekTerm, parkId));
+        }
+        public List<ReservatieVO> ZoekReservatiesMetPeriode(string klantZoekTerm, int parkId, DateTime? startDatum, DateTime? eindDatum)
+        {
+            return ValueObjectConverter.ConvertReservatieToValueObject(_reservatieRepository.ZoekReservatiesMetPeriode(klantZoekTerm, parkId, startDatum, eindDatum));
         }
         //huizen
         public List<HuisVO> GetAllHuizen()
@@ -49,6 +60,15 @@ namespace VakantieVerblijven.Domain
         public List<HuisVO> GetBeschikbareHuizen(int parkId, int aantalPersonen, DateTime beginDatum, DateTime eindDatum)
         {
             return ValueObjectConverter.ConvertHuisToValueObject(_huisRepository.GetBeschikbareHuizen(parkId, aantalPersonen, beginDatum, eindDatum));
+        }
+        public void ZetHuisInOnderhoud(int huisId)
+        {
+            _huisRepository.ZetHuisInOnderhoud(huisId);
+        }
+
+        public void HaalHuisUitOnderhoud(int huisId)
+        {
+            _huisRepository.HaalHuisUitOnderhoud(huisId);
         }
         //faciliteiten
         public List<FaciliteitVO> GetAlleFaciliteiten()
@@ -68,11 +88,6 @@ namespace VakantieVerblijven.Domain
         public List<KlantVO> ZoekKlant(string zoekterm)
         {
             return ValueObjectConverter.ConvertKlantToValueObject(_klantRepository.ZoekKlant(zoekterm));
-        }
-
-        public bool VoegReservatieToe(KlantVO gekozenKlant, ParkVO gekozenPark, int aantalPersonen, DateTime startDatum, DateTime eindDatum, HuisVO gekozenHuis)
-        {
-            return _reservatieRepository.VoegReservatieToe(gekozenKlant, gekozenPark, aantalPersonen, startDatum, eindDatum, gekozenHuis);
         }
     }
 }

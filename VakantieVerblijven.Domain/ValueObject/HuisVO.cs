@@ -18,7 +18,6 @@ namespace VakantieVerblijven.Domain.ValueObject
         public string VolledigAdres => $"{Straat} {Nummer}";
         public string OnderhoudStatus => Actief ? "Geen onderhoud" : "In onderhoud";
 
-
         public HuisVO(int id, string straat, int nummer, bool actief, int aantalPersonen)
         {
             Id = id;

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VakantieVerblijven.XUnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d796f30d44caec094e8df55a83bdf4f21ac80b0f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+effa7e6fcc250c48370570e25594f97b6a6c81fd")]
 [assembly: System.Reflection.AssemblyProductAttribute("VakantieVerblijven.XUnitTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VakantieVerblijven.XUnitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

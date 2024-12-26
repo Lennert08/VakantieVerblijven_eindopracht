@@ -12,5 +12,7 @@ namespace VakantieVerblijven.Domain.Repositories
         List<Huis> GetAllHuizen();
         List<Huis> GetBeschikbareHuizen(int parkId, int aantalPersonen, DateTime beginDatum, DateTime eindDatum);
         List<string> GetPersonenOpties();
+        void HaalHuisUitOnderhoud(int huisId);
+        void ZetHuisInOnderhoud(int huisId);
     }
 }

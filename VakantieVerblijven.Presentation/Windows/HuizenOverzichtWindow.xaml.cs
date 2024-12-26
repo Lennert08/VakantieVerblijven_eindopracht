@@ -22,7 +22,8 @@ namespace VakantieVerblijven.Presentation.Windows
     public partial class HuizenOverzichtWindow : Window
     {
         public event EventHandler<string> NavigationButtonClicked;
-        public event EventHandler<HuisVO> HuisSelected;   
+        public event EventHandler<HuisVO> HuisSelected;
+        public event EventHandler<HuisVO> OnderhoudButtonClicked;
         public HuizenOverzichtWindow(List<HuisVO> huizen)
         {
             InitializeComponent();
@@ -45,6 +46,24 @@ namespace VakantieVerblijven.Presentation.Windows
                 {
                     HuisSelected?.Invoke(this, huis);
                 }
+            }
+        }
+
+        private void OnderhoudButtonClick(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (HuisDataGrid.SelectedItem is null)
+                {
+                    throw new Exception("U moet eerst een huis selecteren.");
+                } else
+                {
+                    OnderhoudButtonClicked?.Invoke(this, HuisDataGrid.SelectedItem as HuisVO);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Foutmelding",MessageBoxButton.OK,MessageBoxImage.Warning);
             }
         }
     }

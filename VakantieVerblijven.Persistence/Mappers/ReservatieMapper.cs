@@ -243,5 +243,187 @@ namespace VakantieVerblijven.Persistence.Mappers
             }
         }
 
+        public List<Reservatie> ZoekReservaties(string klantZoekTerm, int parkId)
+        {
+            List<Reservatie> reservaties = new List<Reservatie>();
+
+            // De SQL-query
+            string query = @"
+            SELECT 
+            r.Id AS ReservatieId,
+            r.StartDatum,
+            r.EindDatum,
+            k.Id AS KlantId,
+            k.Naam AS KlantNaam,
+            k.Adres AS KlantAdres,
+            h.Id AS HuisId,
+            h.Straat,
+            h.Nummer,
+            h.Aantal_Personen AS AantalPersonen,
+            h.Actief AS HuisActief,
+            p.Id AS ParkId,
+            p.Naam AS ParkNaam,
+            p.Locatie AS ParkLocatie
+            FROM Reservaties r
+            INNER JOIN Klanten k ON r.klant_nummer = k.Id
+            INNER JOIN Huis_Reservaties hr ON r.Id = hr.reservatie_id
+            INNER JOIN Huizen h ON hr.huis_id = h.Id
+            INNER JOIN Park_Huizen ph ON h.Id = ph.huis_id
+            INNER JOIN Parken p ON ph.park_id = p.Id
+            WHERE 
+            -- Als @ParkId = 0, toon alle parken, anders filter op het opgegeven park
+            (@ParkId = 0 OR ph.park_id = @ParkId)
+        
+            -- Als @KlantZoekTerm NULL is, toon alle klanten, anders filter op de opgegeven zoekterm
+             AND (@KlantZoekTerm IS NULL OR k.Naam LIKE '%' + @KlantZoekTerm + '%')
+            ORDER BY r.StartDatum;";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(DbInfo.ConnectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Voeg parameters toe aan de query
+                        command.Parameters.AddWithValue("@ParkId", parkId);
+                        command.Parameters.AddWithValue("@KlantZoekTerm", string.IsNullOrWhiteSpace(klantZoekTerm) ? DBNull.Value : klantZoekTerm);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                // Haal gegevens op uit de database
+                                int reservatieId = (int)reader["ReservatieId"];
+                                DateTime startDatum = (DateTime)reader["StartDatum"];
+                                DateTime eindDatum = (DateTime)reader["EindDatum"];
+                                int klantId = (int)reader["KlantId"];
+                                string klantNaam = reader["KlantNaam"].ToString();
+                                string klantAdres = reader["KlantAdres"].ToString();
+                                int huisId = (int)reader["HuisId"];
+                                string straat = reader["Straat"].ToString();
+                                int nummer = (int)reader["Nummer"];
+                                int aantalPersonen = (int)reader["AantalPersonen"];
+                                bool huisActief = (bool)reader["HuisActief"];
+                                int parkIdResult = (int)reader["ParkId"];
+                                string parkNaam = reader["ParkNaam"].ToString();
+                                string parkLocatie = reader["ParkLocatie"].ToString();
+
+                                // Maak objecten aan
+                                Klant klant = new Klant(klantId, klantNaam, klantAdres);
+                                Park park = new Park(parkIdResult, parkNaam, parkLocatie);
+                                Huis huis = new Huis(huisId, straat, nummer, huisActief, aantalPersonen, park);
+                                Reservatie reservatie = new Reservatie(reservatieId, startDatum, eindDatum, klant, huis);
+
+                                // Voeg toe aan de lijst
+                                reservaties.Add(reservatie);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Fout bij het zoeken naar reservaties: {ex.Message}");
+            }
+
+            return reservaties;
+        }
+
+        public List<Reservatie> ZoekReservatiesMetPeriode(string klantZoekTerm, int parkId, DateTime? startDatum, DateTime? eindDatum)
+        {
+            List<Reservatie> reservaties = new List<Reservatie>();
+
+            // SQL-query
+            string query = @"
+            SELECT 
+            r.Id AS ReservatieId,
+            r.StartDatum,
+            r.EindDatum,
+            k.Id AS KlantId,
+            k.Naam AS KlantNaam,
+            k.Adres AS KlantAdres,
+            h.Id AS HuisId,
+            h.Straat,
+            h.Nummer,
+            h.Aantal_Personen AS AantalPersonen,
+            h.Actief AS HuisActief,
+            p.Id AS ParkId,
+            p.Naam AS ParkNaam,
+            p.Locatie AS ParkLocatie
+            FROM Reservaties r
+            INNER JOIN Klanten k ON r.klant_nummer = k.Id
+            INNER JOIN Huis_Reservaties hr ON r.Id = hr.reservatie_id
+            INNER JOIN Huizen h ON hr.huis_id = h.Id
+            INNER JOIN Park_Huizen ph ON h.Id = ph.huis_id
+            INNER JOIN Parken p ON ph.park_id = p.Id
+            WHERE 
+            -- Als @ParkId = 0, toon alle parken, anders filter op het opgegeven park
+            (@ParkId = 0 OR ph.park_id = @ParkId)
+        
+            -- Als @KlantZoekTerm NULL is, toon alle klanten, anders filter op de opgegeven zoekterm
+            AND (@KlantZoekTerm IS NULL OR k.Naam LIKE '%' + @KlantZoekTerm + '%')
+
+            -- Filter op periode als beide datums aanwezig zijn
+            AND (@StartDatum IS NULL OR r.StartDatum >= @StartDatum)
+            AND (@EindDatum IS NULL OR r.EindDatum <= @EindDatum)
+            ORDER BY r.StartDatum;";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(DbInfo.ConnectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Voeg parameters toe
+                        command.Parameters.AddWithValue("@ParkId", parkId);
+                        command.Parameters.AddWithValue("@KlantZoekTerm", string.IsNullOrWhiteSpace(klantZoekTerm) ? DBNull.Value : klantZoekTerm);
+                        command.Parameters.AddWithValue("@StartDatum", startDatum ?? (object)DBNull.Value);
+                        command.Parameters.AddWithValue("@EindDatum", eindDatum ?? (object)DBNull.Value);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                // Haal gegevens op uit de database
+                                int reservatieId = (int)reader["ReservatieId"];
+                                DateTime startDatumResult = (DateTime)reader["StartDatum"];
+                                DateTime eindDatumResult = (DateTime)reader["EindDatum"];
+                                int klantId = (int)reader["KlantId"];
+                                string klantNaam = reader["KlantNaam"].ToString();
+                                string klantAdres = reader["KlantAdres"].ToString();
+                                int huisId = (int)reader["HuisId"];
+                                string straat = reader["Straat"].ToString();
+                                int nummer = (int)reader["Nummer"];
+                                int aantalPersonen = (int)reader["AantalPersonen"];
+                                bool huisActief = (bool)reader["HuisActief"];
+                                int parkIdResult = (int)reader["ParkId"];
+                                string parkNaam = reader["ParkNaam"].ToString();
+                                string parkLocatie = reader["ParkLocatie"].ToString();
+
+                                // Maak objecten aan
+                                Klant klant = new Klant(klantId, klantNaam, klantAdres);
+                                Park park = new Park(parkIdResult, parkNaam, parkLocatie);
+                                Huis huis = new Huis(huisId, straat, nummer, huisActief, aantalPersonen, park);
+                                Reservatie reservatie = new Reservatie(reservatieId, startDatumResult, eindDatumResult, klant, huis);
+
+                                // Voeg toe aan de lijst
+                                reservaties.Add(reservatie);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Fout bij het zoeken naar reservaties met periode: {ex.Message}");
+            }
+
+            return reservaties;
+        }
+
     }
 }
